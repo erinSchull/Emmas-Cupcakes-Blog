@@ -1,0 +1,39 @@
+.Nav-Bar {
+    background-color: #F45027;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+.Links {
+    color: white;
+    text-decoration: none;
+}
+
+.App-logo {
+    width: 150px;
+    height: 210px;
+}
+
+.App-header {
+    background-color: #294B5E;
+    height: 300px;
+    padding: 20px;
+    color: #F9A78E;
+    
+}
+
+.App-title {
+    display: flex;
+    flex-direction: row;
+}
+
+.Login-button {
+    background-color: #45BC96;;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    height: 30px;
+    width: 50px;
+}
