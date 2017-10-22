@@ -6,6 +6,8 @@ const express = require('express')
     , passport = require('passport')
     , Auth0Strategy = require('passport-auth0');
 
+const ctrl = require('./controller.js');
+
 const app = express();
 
 app.use(bodyParser.json());
@@ -32,24 +34,26 @@ passport.use(new Auth0Strategy({
     clientSecret: process.env.AUTH_CLIENT_SECRET,
     callbackURL: process.env.CALLBACK_URL
 }, function (accessToken, refreshToken, extraParams, profile, done) {
-    //db calls
-    // const db = app.get('db');
-    // db.find_user([ profile.identities[0].user_id ]).then( user => {
-    //     console.log(user)
-    //     if(user[0]) {
-    //        return done(null, user[0].id)
-    //     } else {
-    //         const user = profile._json
-    //         db.create_user([ user.name, 
-    //             user.email, 
-    //             user.picture, 
-    //             user.identities[0].user_id])
-    //         .then(user => {
-    //             done(null, user[0].id)
-    //         })
-    //     }
-    // })
-    done(null, profile);
+    // db calls
+    const id = 'id';
+    const db = app.get('db');
+    db.find_user([ profile.identities[0].user_id ]).then( user => {
+        console.log(user)
+        if(user[0]) {
+           return done(null, user[0].userid)
+        } else {
+            const user = profile._json
+            console.log(user)
+            db.create_user([ user.given_name,
+                user.family_name,
+                user.email,
+                user.identities[0].user_id])
+            .then(user => {
+                done(null, user[0].userid)
+            })
+        }
+    })
+    // done(null, id);
 
 }))
 
@@ -65,21 +69,26 @@ app.get('/auth/me', (req, res) => {
     return res.status(200).send(req.user);
 })
 
+//endpoints
 app.get('/auth/logout', (req, res) => {
     req.logOut();
     res.redirect(302, 'http://localhost:3000/#/')
 })
 
+// app.get('/api/admin', ctrl.getAdmin)
+
 passport.serializeUser(function (id, done) {
     done(null, id);
 })
 passport.deserializeUser(function (id, done) {
-    // app.get('db').find_current_user([ id ])
-    // .then( user => {
-    //     done(null, user[0])
-    // })
-    done(null, id);
+    app.get('db').find_current_user([ id ])
+    .then( user => {
+        done(null, user[0])
+    })
+    // done(null, id);
 })
+
+
 
 const PORT = 3005;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

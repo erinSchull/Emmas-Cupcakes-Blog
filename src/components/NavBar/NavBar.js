@@ -10,28 +10,36 @@ class NavBar extends Component {
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                     <h1 className="App-title">Emma's Life</h1>
-                    <a href={ process.env.REACT_APP_LOGIN }><button className='Login-button' >Login</button></a>
+                    <a href={process.env.REACT_APP_LOGIN}><button className='Login-button' >Login</button></a>
                 </header>
-                <div className='Nav-Bar'>
-                    <Link className='Links' to='/' >
-                        <p>Home</p>
-                    </Link>
+                <div className='Nav' >
+                    <div className='Nav-Bar' >
+                        <Link className='Links' to='/' >
+                            <p>Home</p>
+                        </Link>
+                        <Link className='Links' to='/profile'>
+                            <p>Profile</p>
+                        </Link>
 
-                    <Link className='Links' to='/previews' >
-                        <p>Blog</p>
-                    </Link>
+                        <Link className='Links' to='/previews' >
+                            <p>Blog</p>
+                        </Link>
 
-                    <Link className='Links' to='/about'>
-                        <p>About</p>
-                    </Link>
+                        <Link className='Links' to='/about'>
+                            <p>About</p>
+                        </Link>
 
-                    <Link className='Links' to='/shop' >
-                        <p>Shop</p>
-                    </Link>
+                        <Link className='Links' to='/shop' >
+                            <p>Shop</p>
+                        </Link>
+                        <a className='wix' href = 'https://elmitch101.wixsite.com/emmaslife'>
+                        <p>Live Wix Site</p>
+                        </a>
+                    </div>
                 </div>
             </div>
         )
     }
 }
 
-export default NavBar;
+export default NavBar

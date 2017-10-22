@@ -2,8 +2,8 @@ import axios from 'axios';
 
 
 let initialState ={
-    user:{}
-    
+    user:{},
+    is_admin: false
 }
 
 

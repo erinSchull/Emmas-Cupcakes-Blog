@@ -1,9 +1,13 @@
 .Nav-Bar {
-    background-color: #F45027;
     color: white;
     display: flex;
-    flex-flow: row;
+    flex-direction: row;
     justify-content: space-around;
+    background-color: #F45027;
+}
+
+.wix{
+    text-decoration: none;
 }
 
 .Links {
