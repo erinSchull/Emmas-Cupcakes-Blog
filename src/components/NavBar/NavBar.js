@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './../../images/cute cupcakes.jpeg';
-import './NavBar.css'
+import './NavBar.css';
+import { connect } from 'react-redux';
+
 
 class NavBar extends Component {
+    componentDidMount() {
+        
+    }
     render() {
         return (
             <div>
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                     <h1 className="App-title">Emma's Life</h1>
-                    <a href={process.env.REACT_APP_LOGIN}><button className='Login-button' >Login</button></a>
+                    <div className='login'>
+                    <a href={process.env.REACT_APP_LOGIN}><button className='Login-button'>Login</button></a>
+                    </div>
                 </header>
                 <div className='Nav' >
                     <div className='Nav-Bar' >

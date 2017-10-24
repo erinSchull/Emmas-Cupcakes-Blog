@@ -1,0 +1,104 @@
+.auth-info {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    border-bottom: solid;
+    border-width: 5px;
+    border-color: rgba(194, 76, 6, 0.58);
+}
+.first-name {
+    font-size: 21px;
+    color: #591212;
+}
+
+.last-name {
+    font-size: 21px;
+    color: #151A8F;
+}
+
+.email {
+    font-size: 18px;
+    color: #421F5C;
+}
+
+.Order-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 300px;
+}
+
+.order {
+    width: 19%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-tab {
+    height: 23px;
+    background-color: rgb(115, 71, 223);
+    color: white;
+    border-top: solid;
+    border-width: 5px;
+    border-bottom: none;
+    border-color: #1A0F4F;
+    border-radius: 7px;
+} /*use this as part of nesting sass*/
+
+.cake {
+    width: 19%;
+    height: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(115, 71, 223);
+    color: white;
+    border-top: solid;
+    border-width: 5px;
+    border-bottom: none;
+    border-color: #1A0F4F;
+    border-radius: 7px;
+} 
+.frosting {
+    width: 19%;
+    height: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(115, 71, 223);
+    color: white;
+    border-top: solid;
+    border-width: 5px;
+    border-bottom: none;
+    border-color: #1A0F4F;
+    border-radius: 7px;
+} 
+.filling {
+    width: 19%;
+    height: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(115, 71, 223);
+    color: white;
+    border-top: solid;
+    border-width: 5px;
+    border-bottom: none;
+    border-color: #1A0F4F;
+    border-radius: 7px;
+} 
+.status {
+    width: 19%;
+    height: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(115, 71, 223);
+    color: white;
+    border-top: solid;
+    border-width: 5px;
+    border-bottom: none;
+    border-color: #1A0F4F;
+    border-radius: 7px;
+} 

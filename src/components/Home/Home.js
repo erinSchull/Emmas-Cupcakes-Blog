@@ -21,9 +21,9 @@ class Home extends Component {
             <div>
                 <div className='home-Div'>
                     <h3>DISCOVER EMMA'S LIFE</h3>
-                    <p className="App-intro">
+                    <p className="Home-intro">
                         Come On In! (I don't bite)
-                </p>
+                    </p>
                     <Link to = '/previews' >
                     <button className='entry-button' >Enter Here</button>
                     </Link>

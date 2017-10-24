@@ -1,17 +1,17 @@
 .Nav-Bar {
-    color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #F45027;
+    background-color: rgba(251, 219, 159, 0.50);
 }
 
-.wix{
+.wix {
     text-decoration: none;
+    color: rgba(205, 69, 251, 0.83);
 }
 
 .Links {
-    color: white;
+    color: rgba(205, 69, 251, 0.83);
     text-decoration: none;
 }
 
@@ -25,7 +25,8 @@
     height: 300px;
     padding: 20px;
     color: #F9A78E;
-    
+    display: flex;
+    flex-direction: column;
 }
 
 .App-title {
@@ -34,10 +35,18 @@
 }
 
 .Login-button {
-    background-color: #45BC96;;
-    display: flex;
+    background-color: #45BC96;
     text-decoration: none;
     color: white;
     height: 30px;
     width: 50px;
+    border: solid;
+    border-color: chartreuse;
+    border-radius: 7px;
+}
+.login {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 60px;
 }

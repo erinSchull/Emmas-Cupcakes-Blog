@@ -32,10 +32,10 @@ class About extends Component {
                         </div>
                     </p>
                 </div>
-                <div>
+                {/* <div classname='admin-about' >
                     <input type='text' placeholder='About Title'></input>
                     <input type='text' value={this.state.about} onClick={(e) => this.handleChange('about', e)}></input>
-                </div>
+                </div> */}
             </div>
         )
     }
