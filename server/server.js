@@ -6,7 +6,8 @@ const express = require('express')
     , passport = require('passport')
     , Auth0Strategy = require('passport-auth0');
 
-const ctrl = require('./controller.js');
+const ctrl = require('./controllers/users_controller');
+const blogCtrl = require('./controllers/blogs_controller');
 
 const app = express();
 
@@ -75,7 +76,6 @@ app.get('/auth/logout', (req, res) => {
     res.redirect(302, 'http://localhost:3000/#/')
 })
 
-// app.get('/api/admin', ctrl.getAdmin)
 
 passport.serializeUser(function (id, done) {
     done(null, id);
@@ -88,7 +88,9 @@ passport.deserializeUser(function (id, done) {
     // done(null, id);
 })
 
-
+//db endpoints
+app.get('/api/blogpost/:blogid', blogCtrl.getOne);
+// app.get('/api/admin', ctrl.getAdmin);
 
 const PORT = 3005;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

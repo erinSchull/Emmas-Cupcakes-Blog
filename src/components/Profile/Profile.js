@@ -1,6 +1,8 @@
+//need sass for styling- just leave this for now!//
+
 import React, { Component } from 'react';
-import axios from 'axios';
 import './Profile.css';
+import axios from 'axios';
 import { connect } from 'react-redux';
 
 class Profile extends Component {
@@ -30,14 +32,24 @@ class Profile extends Component {
                     <div className='cake'>
                         <p>Cake Flavor</p>
                     </div>
-                    <div className='frosting'>Frosting Flavor</div>
-                    <div className='filling'>Filling Flavor</div>
-                    <div className='filling'>Quantity</div>
-                    <div className='status'>Status</div>
+
+                    <div className='frosting'>
+                        <p>Frosting Flavor</p>
+                    </div>
+                    <div className='filling'>
+                        <p>Filling Flavor</p>
+                    </div>
+                    <div className='filling'>
+                        <p>Quantity</p>
+                    </div>
+                    <div className='status'>
+                        <p>Status</p>
+                        
+                    </div>
                 </div>
             </div>
         )
     }
 }
 
-export default Profile
+export default Profile;

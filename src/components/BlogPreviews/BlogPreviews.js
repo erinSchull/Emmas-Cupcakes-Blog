@@ -20,4 +20,4 @@ class BlogPreviews extends Component {
     }
 }
 
-export default BlogPreviews
+export default BlogPreviews;

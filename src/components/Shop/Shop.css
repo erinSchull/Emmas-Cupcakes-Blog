@@ -1,0 +1,28 @@
+.shop-intro{
+    color: #28E1FF;
+}
+
+.premade-title {
+    color: #930193;
+}
+
+.spec-cupcakes{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.smores-img {
+    height: 150px;
+}
+.winter-formal {
+    height: 150px;
+}
+.deathly-hallows {
+    height: 150px;
+}
+.lemon-cake {
+    height: 150px;
+    width: 100px;
+}

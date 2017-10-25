@@ -1,0 +1,27 @@
+CREATE TABLE blog_post (
+    blogId SERIAL PRIMARY KEY,
+    body TEXT,
+    title TEXT,
+    image VARCHAR
+)
+
+INSERT INTO blog_post(body, title)
+VALUES( 'this is some body', 'this is a title')
+
+module.exports for controller
+    create: (req, res, next) => {
+        const dbInstance = req.app.get('db');  how massive uses the database
+        const {name, description, price, imageurl} = req.body; --> req.body.name, req.body.description, req.body.price, req.body.imageurl
+
+        dbInstance.create_product([ name, description, price, imageurl]) create_product is from sql file
+            .then(() => res.status(200).send()) **promise
+            .catch(() => res.status(500).send()); **errors
+    },
+    getOne: (req, res, next) => {
+        const dbInstance = req.app.get('db');
+        const {params} = req;
+
+        dbInstance.read_product([params.id])
+            .then(() => res.status(200).send(blogId))
+            .catch(() => res.status(500).send());
+    }
