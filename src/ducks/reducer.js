@@ -11,7 +11,7 @@ let initialState ={
 const GET_USER = 'GET_USER';
 
 export function getUser(id) {
-    const user = axios.get(/auth/me)
+    const user = axios.get('/auth/me')
     .then(res => {
         res.data
     })
@@ -20,6 +20,7 @@ export function getUser(id) {
         payload: user
     }
 };
+
 
 export default function reducer(state = initialState, action){
     switch(action.type) {

@@ -26,3 +26,35 @@
     height: 150px;
     width: 100px;
 }
+
+.custom-cakes {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cakes {
+    display: flex;
+    flex-flow: column;
+}
+.fillings {
+    display: flex;
+    flex-flow: column;
+}
+.frostings {
+    display: flex;
+    flex-flow: column;
+}
+.toppings {
+    display: flex;
+    flex-flow: column;
+}
+
+.order-button{
+    background-color: rgba(219, 57, 253, 0.73);
+    border-radius: 7px;
+    color: white;
+    width: 250px;
+    font-size: 20px;
+}

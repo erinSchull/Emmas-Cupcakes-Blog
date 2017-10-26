@@ -35,6 +35,7 @@ passport.use(new Auth0Strategy({
     clientSecret: process.env.AUTH_CLIENT_SECRET,
     callbackURL: process.env.CALLBACK_URL
 }, function (accessToken, refreshToken, extraParams, profile, done) {
+    console.log(profile);
     // db calls
     const id = 'id';
     const db = app.get('db');
@@ -48,7 +49,7 @@ passport.use(new Auth0Strategy({
             db.create_user([ user.given_name,
                 user.family_name,
                 user.email,
-                user.identities[0].user_id])
+                user.identities[0].userid])
             .then(user => {
                 done(null, user[0].userid)
             })

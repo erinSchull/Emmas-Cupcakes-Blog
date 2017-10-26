@@ -1,0 +1,23 @@
+.custom-cakes {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cakes {
+    display: flex;
+    flex-flow: column;
+}
+.fillings {
+    display: flex;
+    flex-flow: column;
+}
+.frostings {
+    display: flex;
+    flex-flow: column;
+}
+.toppings {
+    display: flex;
+    flex-flow: column;
+}

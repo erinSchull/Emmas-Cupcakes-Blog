@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Home from './components/Home/Home';
-import Order from './components/Order/Order';
+import Order from './components/OrderForm/OrderForm';
 import BlogPreviews from './components/BlogPreviews/BlogPreviews';
 import BlogPosts from './components/BlogPosts/BlogPosts';
 import Shop from './components/Shop/Shop';

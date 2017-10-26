@@ -1,3 +1,7 @@
+Stuff about my orders
+
+put any notes I want here!!
+
 CREATE TABLE orders(
     orderid SERIAL PRIMARY KEY,
     status VARCHAR(100),
@@ -9,3 +13,8 @@ CREATE TABLE orders(
     topping VARCHAR(100),
     total INT 
 )
+
+dummy data
+INSERT INTO orders(status, usersid, quantity, cake, frosting, filling, topping, total)
+VALUES('submitted', 4, 6, 'chocolate', 'creme cheese', 'raspberry marshmallow', 'theme rings', 1200)
+
