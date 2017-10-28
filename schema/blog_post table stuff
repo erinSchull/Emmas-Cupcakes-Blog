@@ -25,3 +25,7 @@ module.exports for controller
             .then(() => res.status(200).send(blogId))
             .catch(() => res.status(500).send());
     }
+
+UPDATE blog_post
+SET (title, body, image) = ('title3', 'body3', 'image1')
+WHERE blogid= 3

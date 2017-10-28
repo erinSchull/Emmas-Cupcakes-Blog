@@ -30,6 +30,9 @@ class About extends Component {
                         Well, I'm Emma... and welcome to Emma's Life
                         </p>
                     </div>
+                    <div>Icons made by <a className='freepik-link' href="http://www.freepik.com" title="Freepik">Freepik </a> 
+                        from <a className='flaticon-link' href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com </a> 
+                        is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
                 </div>
                 {/* <div classname='admin-about' >
                     <input type='text' placeholder='About Title'></input>

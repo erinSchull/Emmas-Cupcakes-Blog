@@ -1,22 +1,29 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import logo from './../../images/cute cupcakes.jpeg';
+import logo from './../../images/cupcake-logo.png';
 import './NavBar.css';
+import { getUser } from './../../ducks/reducer';
 import { connect } from 'react-redux';
 
 
 class NavBar extends Component {
+
     componentDidMount() {
         
+        this.props.getUser()
     }
     render() {
+
+       this.props.users;
+       
         return (
             <div>
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                     <h1 className="App-title">Emma's Life</h1>
-                    <div className='login'>
-                    <a href={process.env.REACT_APP_LOGIN}><button className='Login-button'>Login</button></a>
+                    <div className='login'> 
+                        <a className='login-content' href= {this.props.user.userid ? process.env.REACT_APP_LOGOUT : process.env.REACT_APP_LOGIN}>
+                            <button className='Login-button'>{this.props.user.userid ? 'logout' : 'login'}</button></a>
                     </div>
                 </header>
                 <div className='Nav' >
@@ -39,8 +46,8 @@ class NavBar extends Component {
                         <Link className='Links' to='/shop' >
                             <p>Shop</p>
                         </Link>
-                        <a className='wix' href = 'https://elmitch101.wixsite.com/emmaslife'>
-                        <p>Live Wix Site</p>
+                        <a className='wix' href='https://elmitch101.wixsite.com/emmaslife'>
+                            <p>Live Wix Site</p>
                         </a>
                     </div>
                 </div>
@@ -49,4 +56,11 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar;
+function mapStateToProps(state) {
+    console.log("state from private", state)
+    return {
+        user: state.user
+    }
+}
+
+export default connect(mapStateToProps, { getUser })(NavBar);

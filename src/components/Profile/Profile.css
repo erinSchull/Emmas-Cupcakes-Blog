@@ -29,76 +29,21 @@
     height: 300px;
 }
 
-.order {
-    width: 19%;
+.columns {
+    width: 12%;
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
 }
 
-.order-tab {
+
+.tabs {
     height: 23px;
     background-color: rgb(115, 71, 223);
     color: white;
     border-top: solid;
-    border-width: 5px;
+    border-width: 100%;
     border-bottom: none;
     border-color: #1A0F4F;
     border-radius: 7px;
 } /*use this as part of nesting sass*/
-
-.cake {
-    width: 19%;
-    height: 23px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgb(115, 71, 223);
-    color: white;
-    border-top: solid;
-    border-width: 5px;
-    border-bottom: none;
-    border-color: #1A0F4F;
-    border-radius: 7px;
-} 
-.frosting {
-    width: 19%;
-    height: 23px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgb(115, 71, 223);
-    color: white;
-    border-top: solid;
-    border-width: 5px;
-    border-bottom: none;
-    border-color: #1A0F4F;
-    border-radius: 7px;
-} 
-.filling {
-    width: 19%;
-    height: 23px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgb(115, 71, 223);
-    color: white;
-    border-top: solid;
-    border-width: 5px;
-    border-bottom: none;
-    border-color: #1A0F4F;
-    border-radius: 7px;
-} 
-.status {
-    width: 19%;
-    height: 23px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgb(115, 71, 223);
-    color: white;
-    border-top: solid;
-    border-width: 5px;
-    border-bottom: none;
-    border-color: #1A0F4F;
-    border-radius: 7px;
-} 

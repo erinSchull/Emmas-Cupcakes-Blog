@@ -100,7 +100,9 @@ class Shop extends Component {
                         </ol>
                     </div>
                 </div>
-                <a className='button-text' href='/#/shop/orderform'><button onClick={this.props.getUser} className='order-button' >Alright, I'm Ready to Order!</button></a>
+                <a className='button-text' href='/#/shop/orderform'>
+                <button onClick={this.props.getUser} className='order-button' >Alright, I'm Ready to Order!</button>
+                </a>
             </div>
         )
     }

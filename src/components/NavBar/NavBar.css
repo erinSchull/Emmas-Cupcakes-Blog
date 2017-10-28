@@ -26,12 +26,12 @@
     padding: 20px;
     color: #F9A78E;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: flex-end;
 }
 
 .App-title {
-    display: flex;
-    flex-direction: row;
+  color: white;
 }
 
 .Login-button {
@@ -44,9 +44,9 @@
     border-color: chartreuse;
     border-radius: 7px;
 }
-.login {
+.login-content {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: center;
     width: 60px;
 }

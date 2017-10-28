@@ -1,7 +1,19 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
+import {getUser} from './../../ducks/reducer';
 
 class OrderForm extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            userInfo: {}
+        }
+    }
+
+    componentDidMount() {
+       this.props.getUser()
+    }
+
     render() {
         return (
             <div>
@@ -60,9 +72,19 @@ class OrderForm extends Component {
                         <p><input type='radio' />Powdered sugar design</p>
                     </div>
                 </div>
+                <div className='stripe-checkout'>
+                    <button>Let's Pay!</button>
+                </div>
             </div>
         )
     }
 }
 
-export default OrderForm;
+function mapStateToProps(state) {
+    console.log("state from private", state)
+    return {
+        user: state.user
+    }
+}
+
+export default connect(mapStateToProps, { getUser })(OrderForm);

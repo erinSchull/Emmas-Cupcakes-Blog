@@ -8,6 +8,7 @@ const express = require('express')
 
 const ctrl = require('./controllers/users_controller');
 const blogCtrl = require('./controllers/blogs_controller');
+const orderCtrl = require('./controllers/orders_controller');
 
 const app = express();
 
@@ -40,12 +41,12 @@ passport.use(new Auth0Strategy({
     const id = 'id';
     const db = app.get('db');
     db.find_user([ profile.identities[0].user_id ]).then( user => {
-        console.log(user)
+        console.log(1, user)
         if(user[0]) {
+            console.log('text')
            return done(null, user[0].userid)
         } else {
             const user = profile._json
-            console.log(user)
             db.create_user([ user.given_name,
                 user.family_name,
                 user.email,
@@ -82,16 +83,24 @@ passport.serializeUser(function (id, done) {
     done(null, id);
 })
 passport.deserializeUser(function (id, done) {
-    app.get('db').find_current_user([ id ])
+    app.get('db').current_user([ id ])
     .then( user => {
         done(null, user[0])
     })
     // done(null, id);
 })
 
-//db endpoints
-app.get('/api/blogpost/:blogid', blogCtrl.getOne);
-// app.get('/api/admin', ctrl.getAdmin);
+//db blog endpoints
+app.get('/api/:blogid', blogCtrl.getOne);
+app.put('/api/:blogid', blogCtrl.create);
+
+//db order endpoints
+app.get('/api/getorder', orderCtrl.getOrder);
+
+//db user endpoints
+app.get('/api/admin', ctrl.getAdmin);
+app.get('/api/user', ctrl.getUser);
+
 
 const PORT = 3005;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
