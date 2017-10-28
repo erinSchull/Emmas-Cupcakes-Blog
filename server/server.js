@@ -38,7 +38,7 @@ passport.use(new Auth0Strategy({
 }, function (accessToken, refreshToken, extraParams, profile, done) {
     console.log(profile);
     // db calls
-    const id = 'id';
+
     const db = app.get('db');
     db.find_user([ profile.identities[0].user_id ]).then( user => {
         console.log(1, user)
@@ -50,8 +50,9 @@ passport.use(new Auth0Strategy({
             db.create_user([ user.given_name,
                 user.family_name,
                 user.email,
-                user.identities[0].userid])
+                user.identities[0].user_id])
             .then(user => {
+                console.log('testing')
                 done(null, user[0].userid)
             })
         }
@@ -93,6 +94,7 @@ passport.deserializeUser(function (id, done) {
 //db blog endpoints
 app.get('/api/:blogid', blogCtrl.getOne);
 app.put('/api/:blogid', blogCtrl.create);
+//not using these anymore
 
 //db order endpoints
 app.get('/api/getorder', orderCtrl.getOrder);

@@ -19,8 +19,10 @@ class NavBar extends Component {
         return (
             <div>
                 <header className="App-header">
+                    <div className='app-name'>
                     <img src={logo} className="App-logo" alt="logo" />
                     <h1 className="App-title">Emma's Life</h1>
+                    </div>
                     <div className='login'> 
                         <a className='login-content' href= {this.props.user.userid ? process.env.REACT_APP_LOGOUT : process.env.REACT_APP_LOGIN}>
                             <button className='Login-button'>{this.props.user.userid ? 'logout' : 'login'}</button></a>

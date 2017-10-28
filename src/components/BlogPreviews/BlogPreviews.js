@@ -6,14 +6,14 @@ class BlogPreviews extends Component {
         return (
             <div>
                 <h3>Blog Previews</h3>
-                <Link to='/previews/1' >
-                    <p>Post #1</p>
+                <Link to='/blog1' >
+                    <p>Hello World!</p>
                 </Link>
-                <Link to='/previews/2' >
-                    <p>Post #2</p>
+                <Link to='/blog2' >
+                    <p>Books vs. Movies</p>
                 </Link>
-                <Link to='/previews/3' >
-                    <p>Post #3</p>
+                <Link to='/blog3' >
+                    <p>Killer Cupcakes</p>
                 </Link>
             </div>
         )

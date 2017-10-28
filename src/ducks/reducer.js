@@ -32,7 +32,7 @@ export function getUser() { //action builder//
 export function getOrder() {
     const order = axios.get('/api/getorder')
     .then(res => {
-        res.data
+        return res.data
     })
     return {
         type: GET_ORDER,
@@ -43,7 +43,7 @@ export function getOrder() {
 export function readOrders() {
     const orders = axios.get('/api/orders')
     .then(res=> {
-        res.data
+        return res.data
     })
     return {
         type: ALL_ORDERS,
@@ -53,7 +53,7 @@ export function readOrders() {
 export function getAdmin() {
     const admin = axios.get('/api/admin')
     .then(res => {
-        res.data
+        return res.data
     })
     return {
         type: GET_ADMIN,
@@ -63,7 +63,7 @@ export function getAdmin() {
 
 export function getBlog(blogid) {
     const blog = axios.get(`/api/${blogid}`).then(res => {
-        res.data
+        return res.data
     })
     return {
         type: GET_BLOG,
@@ -74,7 +74,7 @@ export function getBlog(blogid) {
 export function addBlog(blogid) {
     const blog = axios.post(`/api/${blogid}`)
     .then(res => {
-        res.data
+        return res.data
     })
     return {
         type: ADD_BLOG,
