@@ -4,14 +4,19 @@ const express = require('express')
     , bodyParser = require('body-parser')
     , massive = require('massive')
     , passport = require('passport')
-    , Auth0Strategy = require('passport-auth0');
+    , Auth0Strategy = require('passport-auth0')
+    , cors = require('cors')
+    , stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
+
+    
 const ctrl = require('./controllers/users_controller');
 const blogCtrl = require('./controllers/blogs_controller');
 const orderCtrl = require('./controllers/orders_controller');
-
+    
 const app = express();
-
+    
+app.use(cors())
 app.use(bodyParser.json());
 app.use(session({ //always config first
     secret: process.env.SECRET,
@@ -61,6 +66,43 @@ passport.use(new Auth0Strategy({
 
 }))
 
+app.post('/api/payment', function(req, res, next){
+    //convert amount to pennies
+    const amountArray = req.body.amount.toString().split('');
+    const pennies = [];
+    for (var i = 0; i < amountArray.length; i++) {
+      if(amountArray[i] === ".") {
+        if (typeof amountArray[i + 1] === "string") {
+          pennies.push(amountArray[i + 1]);
+        } else {
+          pennies.push("0");
+        }
+        if (typeof amountArray[i + 2] === "string") {
+          pennies.push(amountArray[i + 2]);
+        } else {
+          pennies.push("0");
+        }
+          break;
+      } else {
+          pennies.push(amountArray[i])
+      }
+    }
+    const convertedAmt = parseInt(pennies.join(''));
+  
+    const charge = stripe.charges.create({
+    amount: convertedAmt, // amount in cents, again
+    currency: 'usd',
+    source: req.body.token.id,
+    description: 'Test charge from react app'
+  }, function(err, charge) {
+      if (err) return res.sendStatus(500)
+      return res.sendStatus(200);
+    // if (err && err.type === 'StripeCardError') {
+    //   // The card has been declined
+    // }
+  });
+  });
+
 app.get('/auth', passport.authenticate('auth0')); //just how this library was written
 app.get('/auth/callback', passport.authenticate('auth0', {
     successRedirect: 'http://localhost:3000/#/', //where we're running our front end
@@ -73,7 +115,7 @@ app.get('/auth/me', (req, res) => {
     return res.status(200).send(req.user);
 })
 
-//endpoints
+//auth endpoints
 app.get('/auth/logout', (req, res) => {
     req.logOut();
     res.redirect(302, 'http://localhost:3000/#/')
@@ -98,10 +140,15 @@ app.put('/api/:blogid', blogCtrl.create);
 
 //db order endpoints
 app.get('/api/getorder', orderCtrl.getOrder);
+app.post('/api/order', orderCtrl.addOrder);
+app.post('/api/order/:total', orderCtrl.addTotal);
+app.delete('/api/order/:orderid', orderCtrl.deleteOrder);
+app.put('/api/order/:orderid', orderCtrl.updateStatus);
 
 //db user endpoints
 app.get('/api/admin', ctrl.getAdmin);
 app.get('/api/user', ctrl.getUser);
+app.get('/api/order/:userid', ctrl.getOrdersOnUser);
 
 
 const PORT = 3005;

@@ -1,0 +1,64 @@
+@import './../../_variables.scss';
+
+.nav-header {
+
+    .wix {
+        text-decoration: none;
+        color: rgba(2, 189, 189, 0.92);
+    }
+    .app-name{
+        
+        .App-logo {
+            width: 150px;
+            height: 210px;
+        }
+        .App-title {
+        color: $headerTextColor;
+        }
+    }
+    .Links {
+        color: rgba(205, 69, 251, 0.83);
+        text-decoration: none;
+    }
+    .App-header {
+        background-color: $headerColor;
+        height: 300px;
+        padding: 20px;
+        color: #F9A78E;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    .Nav-Bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(251, 219, 159, 0.50);
+    }                                                                
+    
+    
+    
+    .Login-button {
+        background-color: rgb(199, 242, 244);
+        text-decoration: none;
+        color: $headerTextColor;
+        height: 30px;
+        width: 50px;
+        border: solid;
+        border-color: #9000B6;
+        border-radius: 7px;
+    }
+    .login{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        .login-content {
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 60px;
+        }
+    }
+}
+    

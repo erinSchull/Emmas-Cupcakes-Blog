@@ -1,0 +1,15 @@
+@import './../../_variables.scss';
+
+.blog-previews{
+    h3{
+        font-family: $blogTitles; 
+        color: $headerTextColor;
+    }
+    p{
+        font-family: 'Dosis', sans-serif;
+        text-decoration: none;
+        color: #0F0137;
+        font-size: 20px;
+    }
+
+}

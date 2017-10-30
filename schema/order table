@@ -18,3 +18,20 @@ dummy data
 INSERT INTO orders(status, usersid, quantity, cake, frosting, filling, topping, total)
 VALUES('submitted', 4, 6, 'chocolate', 'creme cheese', 'raspberry marshmallow', 'theme rings', 1200)
 
+INSERT INTO orders(total)
+VALUES(400)
+
+
+Inner Join syntax
+
+SELECT *
+FROM users
+INNER JOIN orders
+ON users.userid = orders.usersid;
+
+UPDATE orders
+SET usersid = 8
+WHERE orderid = 1
+
+DELETE FROM orders
+WHERE orderid = 2

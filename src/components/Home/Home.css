@@ -1,11 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Dosis");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 .entry-button {
-    background-color: rgba(0, 255, 195, 0.83);
-}
+  background-color: rgba(0, 255, 195, 0.83);
+  border-color: #9000B6;
+  border-radius: 7px;
+  height: 30px;
+  width: 150px;
+  font-size: 20px;
+  color: white; }
 
-.home-Div {
-    background-color: 
-}
+.home-Div .home-title {
+  color: rgba(246, 70, 174, 0.82); }
+
+.home-Div p {
+  font-family: "Playfair Display", serif; }
 
 .Home-intro {
-    color: #9342F3;
-}
+  color: #9342F3; }

@@ -3,24 +3,12 @@ import './Home.css';
 import { Link } from 'react-router-dom';
 
 class Home extends Component {
-    constructor(){
-        super();
-
-        this.state = {
-            title: '',
-            subtitle: ''
-        }
-    }
-
-    handleChange(prop, e){
-        this.setState({[prop]: e.target.value})
-    }
 
     render() {
         return (
             <div>
                 <div className='home-Div'>
-                    <h3>DISCOVER EMMA'S LIFE</h3>
+                    <h3 className='home-title' >DISCOVER EMMA'S LIFE</h3>
                     <p className="Home-intro">
                         Come On In! (I don't bite)
                     </p>

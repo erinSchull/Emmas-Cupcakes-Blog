@@ -7,6 +7,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
@@ -20,8 +21,10 @@
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14",
+    "react-stripe-checkout": "^2.6.3",
     "redux": "^3.7.2",
-    "redux-promise-middleware": "^4.4.1"
+    "redux-promise-middleware": "^4.4.1",
+    "stripe": "^5.2.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
@@ -31,5 +34,5 @@
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }  
+  }
 }

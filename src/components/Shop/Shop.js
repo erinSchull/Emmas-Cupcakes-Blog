@@ -9,6 +9,10 @@ import deathlyHallows from './../../images/deathly-hollows-cupcake.jpeg';
 import lemonCakes from './../../images/lemon-cupcakes.png';
 
 class Shop extends Component {
+    componentDidMount() {
+        this.props.getUser()
+    }
+
     render() {
         return (
             <div>
@@ -100,12 +104,18 @@ class Shop extends Component {
                         </ol>
                     </div>
                 </div>
-                <a className='button-text' href='/#/shop/orderform'>
-                <button onClick={this.props.getUser} className='order-button' >Alright, I'm Ready to Order!</button>
+                <a className='button-text' href= {this.props.user.userid ? '/#/shop/orderform' : process.env.REACT_APP_LOGIN}>
+                <button className='order-button' >Alright, I'm Ready to Order!</button>
                 </a>
             </div>
         )
     }
 }
+function mapStateToProps(state) {
+    console.log("state from shop", state)
+    return {
+        user: state.user
+    }
+}
 
-export default connect(null,{getUser})(Shop);
+export default connect(mapStateToProps,{getUser})(Shop);

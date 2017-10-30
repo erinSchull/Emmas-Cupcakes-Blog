@@ -1,0 +1,25 @@
+@import './../../_variables.scss';
+
+.entry-button {
+    background-color: rgba(0, 255, 195, 0.83);
+    border-color: #9000B6;
+    border-radius: 7px;
+    height: 30px;
+    width: 150px;
+    font-size: 20px;
+    color: white;
+}
+
+.home-Div {
+    .home-title {
+        color: rgba(246, 70, 174, 0.82);
+    }
+    p{
+     font-family: $blogTitles;   
+    }
+    
+}
+
+.Home-intro {
+    color: #9342F3;
+}

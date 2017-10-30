@@ -1,52 +1,53 @@
-.Nav-Bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: rgba(251, 219, 159, 0.50);
-}
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Dosis");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+.nav-header .wix {
+  text-decoration: none;
+  color: rgba(2, 189, 189, 0.92); }
 
-.wix {
+.nav-header .app-name .App-logo {
+  width: 150px;
+  height: 210px; }
+
+.nav-header .app-name .App-title {
+  color: rgba(246, 70, 174, 0.82); }
+
+.nav-header .Links {
+  color: rgba(205, 69, 251, 0.83);
+  text-decoration: none; }
+
+.nav-header .App-header {
+  background-color: rgba(2, 189, 189, 0.82);
+  height: 300px;
+  padding: 20px;
+  color: #F9A78E;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end; }
+
+.nav-header .Nav-Bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgba(251, 219, 159, 0.5); }
+
+.nav-header .Login-button {
+  background-color: #c7f2f4;
+  text-decoration: none;
+  color: rgba(246, 70, 174, 0.82);
+  height: 30px;
+  width: 50px;
+  border: solid;
+  border-color: #9000B6;
+  border-radius: 7px; }
+
+.nav-header .login {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+  .nav-header .login .login-content {
     text-decoration: none;
-    color: rgba(205, 69, 251, 0.83);
-}
-
-.Links {
-    color: rgba(205, 69, 251, 0.83);
-    text-decoration: none;
-}
-
-.App-logo {
-    width: 150px;
-    height: 210px;
-}
-
-.App-header {
-    background-color: #294B5E;
-    height: 300px;
-    padding: 20px;
-    color: #F9A78E;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-
-.App-title {
-  color: white;
-}
-
-.Login-button {
-    background-color: #45BC96;
-    text-decoration: none;
-    color: white;
-    height: 30px;
-    width: 50px;
-    border: solid;
-    border-color: chartreuse;
-    border-radius: 7px;
-}
-.login-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 60px;
-}
+    width: 60px; }

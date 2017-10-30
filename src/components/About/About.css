@@ -1,7 +1,7 @@
 .about-Text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 .freepik-link {
     text-decoration: none;
