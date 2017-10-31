@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-
+import './BlogPosts.css';
 
 class BlogPosts extends Component {
 
     render() {
         return (
-            <div>
+            <div className='hello-blog' >
                 <h2 className='blog1-title' >Hello World!</h2>
                 <p className='blog1-body1' >Hey! So I'm Emma. So I decided I wanted to start a blog but I haven't quite decided on what to write about.
                     I'm probably going to just write whatever is on my mind whenever that is. Some days it might be a random thought or a recipe.
@@ -21,11 +21,6 @@ class BlogPosts extends Component {
             </div>
         )
     }
-    // render() { blog post 2, repeat this for etc.
-    //     return(
-    //          <div></div>
-    //     )
-    // }
 }
 
 export default BlogPosts;

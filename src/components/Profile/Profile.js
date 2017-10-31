@@ -1,4 +1,3 @@
-//need sass for styling- just leave this for now!//
 
 import React, { Component } from 'react';
 import './Profile.css';

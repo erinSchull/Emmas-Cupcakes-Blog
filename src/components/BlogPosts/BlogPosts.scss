@@ -1,0 +1,17 @@
+@import './../../_variables.scss';
+
+.hello-blog{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    h2{
+        font-family: $blogTitles;
+    }
+    p{
+        font-family: $blogText;
+    }
+    button{
+        height: $buttonHeight;
+        font-size: 12px;
+    }
+}

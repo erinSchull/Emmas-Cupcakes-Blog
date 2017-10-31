@@ -8,7 +8,8 @@
   height: 30px;
   width: 150px;
   font-size: 20px;
-  color: white; }
+  color: #240087;
+  border-width: 3px; }
 
 .home-Div .home-title {
   color: rgba(246, 70, 174, 0.82); }

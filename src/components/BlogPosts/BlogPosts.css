@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Dosis");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+.hello-blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+  .hello-blog h2 {
+    font-family: "Playfair Display", serif; }
+  .hello-blog p {
+    font-family: "Open Sans", sans-serif; }
+  .hello-blog button {
+    height: 30px;
+    font-size: 12px; }
