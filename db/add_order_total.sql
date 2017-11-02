@@ -1,2 +1,2 @@
-INSERT INTO orders(total)
-VALUES(500);
+INSERT INTO orders(total, orderid)
+VALUES $1, $2;

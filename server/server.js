@@ -134,21 +134,21 @@ passport.deserializeUser(function (id, done) {
 })
 
 //db blog endpoints
-app.get('/api/:blogid', blogCtrl.getOne);
-app.put('/api/:blogid', blogCtrl.create);
+// app.get('/api/:blogid', blogCtrl.getOne);
+// app.put('/api/:blogid', blogCtrl.create);
 //not using these anymore
 
 //db order endpoints
-app.get('/api/getorder', orderCtrl.getOrder);
-app.post('/api/order', orderCtrl.addOrder);
-app.post('/api/order/:total', orderCtrl.addTotal);
-app.delete('/api/order/:orderid', orderCtrl.deleteOrder);
-app.put('/api/order/:orderid', orderCtrl.updateStatus);
+app.get('/api/order/:id', orderCtrl.getOrder);
+app.post('/api/order/:id', orderCtrl.addOrder);
+app.post('/api/order/:id', orderCtrl.addTotal);
+app.delete('/api/order/:id', orderCtrl.deleteOrder);
+app.put('/api/order/:id', orderCtrl.updateStatus);
 
 //db user endpoints
 app.get('/api/admin', ctrl.getAdmin);
 app.get('/api/user', ctrl.getUser);
-app.get('/api/order/:userid', ctrl.getOrdersOnUser);
+app.get('/api/orders/:userid', ctrl.getOrdersOnUser);
 
 
 const PORT = 3005;

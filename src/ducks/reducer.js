@@ -35,7 +35,7 @@ export function getUser() { //action builder//
 };
 
 export function getOrder() {
-    const order = axios.get('/api/getorder')
+    const order = axios.get(`/api/order/${orderid}`)
     .then(res => {
         return res.data
     })
@@ -99,7 +99,7 @@ export function userOrder(userid) {
 };
 
 export function addOrder() {
-    const addOrder = axios.post('/api/order')
+    const addOrder = axios.post(`/api/order/${orderid}`)
     .then(res => {
         return res.data
     })
@@ -109,7 +109,7 @@ export function addOrder() {
     }
 };
 export function addTotal(total) {
-    const addTotal = axios.post(`/api/order/${total}`)
+    const addTotal = axios.post(`/api/order/${orderid}`)
     .then(res => {
         return res.data
     })

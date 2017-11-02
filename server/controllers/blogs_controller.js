@@ -3,7 +3,7 @@ module.exports = {
         const db = req.app.get('db');
         const {body, title, image} = req.body;
 
-        dbInstance.add_blog([ body, title, image])
+        db.add_blog([ body, title, image])
             .then(() => res.status(200).send())
             .catch(() => res.status(500).send());
     },

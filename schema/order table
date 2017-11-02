@@ -22,12 +22,12 @@ INSERT INTO orders(total)
 VALUES(400)
 
 
-Inner Join syntax
-
+Inner Join syntax:
 SELECT *
 FROM users
 INNER JOIN orders
 ON users.userid = orders.usersid;
+
 
 UPDATE orders
 SET usersid = 8
