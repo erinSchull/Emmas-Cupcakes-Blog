@@ -2,15 +2,30 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
-$headerColor: rgba(2, 189, 189, 0.82);
-$headerTextColor: rgba(246, 70, 174, 0.82);
+//header variables
+$headerColor: #F7A9A8;
+$headerTextColor: #EFE3F2;
+// $headerBorder
+$linkTextColor: #253D5B;
+$linkBackgroundColor: #4CE0B3;
+$linkBorder: solid 5px #f4f4f4;
+$navBorder: solid 8px #ED6A5E;
+$navBackground: #377771;
+$loginButtonBackground: #E5C3D1;
+$loginButtonTextColor: #7048b6;
+$loginButtonBorder: solid black;
+
+//blog variables
 $blogText: 'Open Sans', sans-serif;
 $blogTitles: 'Playfair Display', serif;
-$shopDetails: 'Dosis', sans-serif;
-$shopTitles: 'Josefin Sans', sans-serif;
 $blogImageHeight: 150px; 
 $blogImageWidth: 100px;
 $blogTitleImageHeight: 200px;
 $blogTitleImageWidth: 300px;
 $buttonHeight: 30px;
 $buttonWidth: 125px;
+
+//shop variables
+$shopDetails: 'Dosis', sans-serif;
+$shopTitles: 'Josefin Sans', sans-serif;
+

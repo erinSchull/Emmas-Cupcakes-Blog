@@ -1,12 +1,16 @@
 start with SQL file with the sql query in mind
 
 then go to the (db table)specified CONTROLLER
+    handle the promises; 
+    req.body needs to be in same order as sql query, won't work otherwise!!!
+    console.log(req.body) and req.params to find out what to include as params in the db.sql_file
     to create the function that will go in the
         reducer...
 
 in SERVER make endpoint:
     app.(rest method)-- if params: must match what will be put into reducer
     takes in params:
+        template string: `/api/endpoint/${params}`
         endpoint url(note if there are parameters)
         ,controller.controllerMethod
 
@@ -27,12 +31,20 @@ in the REDUCER:
                 use .then to hold the promise
                 write the return which will update initial state
                 (in switch statement)
+                export function createDeck() {
+                    return {
+                        type: CREATE_DECK,
+                        payload: axios.post('/api/create/deck').then(res => res.data)
+                    }
+                }
+
 
             in the switch statement w/in reducer function
                 we will write the case with the action type
                 (the const set above the function)
                 + '_FULFILLED' is included when the action has
-                an axios call payload
+                an axios call payload-- **from redux-promise-middleware**
+                include any specified logic 
                 the case will return the Object.Assign
                 with parameters of:
                     the empty object which is initial state,
@@ -44,8 +56,11 @@ FRONT END DB INPUT:
 
 make a function corresponding with this.props.reducerFunction(invoked)
 in onClick event: 
-<button onclick="myFunction()">Click me</button>
+<button onClick="myFunction()">Click me</button>
 
+componentDidMount(){
+    this.props.reducerFunction(this.props.reduxState_id)
+}
 
 mapStateToProps is if you need to access info from initialState in reducer
 

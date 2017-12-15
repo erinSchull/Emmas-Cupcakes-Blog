@@ -1,4 +1,5 @@
 SELECT *
-FROM users
-INNER JOIN orders
-ON users.userid = orders.usersid;
+FROM orders
+INNER JOIN users
+ON orders.usersid = users.userid;
+--current user param above^^

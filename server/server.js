@@ -130,25 +130,19 @@ passport.deserializeUser(function (id, done) {
     .then( user => {
         done(null, user[0])
     })
-    // done(null, id);
 })
 
-//db blog endpoints
-// app.get('/api/:blogid', blogCtrl.getOne);
-// app.put('/api/:blogid', blogCtrl.create);
-//not using these anymore
-
-//db order endpoints
-app.get('/api/order/:id', orderCtrl.getOrder);
-app.post('/api/order/:id', orderCtrl.addOrder);
-app.post('/api/order/:id', orderCtrl.addTotal);
-app.delete('/api/order/:id', orderCtrl.deleteOrder);
-app.put('/api/order/:id', orderCtrl.updateStatus);
+//db order endpoints 
+//oh my hell these are crap 12/14
+app.get('/api/user/order/:usersid', orderCtrl.getOrder);
+app.post('/api/order/:usersid', orderCtrl.addOrder);
+app.put('/api/order/status/:orderid', orderCtrl.updateStatus);
+app.delete('/api/order/:orderid', orderCtrl.deleteOrder);
 
 //db user endpoints
 app.get('/api/admin', ctrl.getAdmin);
 app.get('/api/user', ctrl.getUser);
-app.get('/api/orders/:userid', ctrl.getOrdersOnUser);
+app.get('/api/orders/:usersid', ctrl.getOrdersOnUser);
 
 
 const PORT = 3005;

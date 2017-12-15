@@ -105,7 +105,8 @@ class Shop extends Component {
                     </div>
                 </div>
                 <a className='button-text' href= {this.props.user.userid ? '/#/shop/orderform' : process.env.REACT_APP_LOGIN}>
-                <button className='order-button' >Alright, I'm Ready to Order!</button>
+                <button className='order-button' >Alright, I'm Ready to Order!</button> 
+                {/* this works */}
                 </a>
             </div>
         )

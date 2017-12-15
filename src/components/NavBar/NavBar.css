@@ -3,42 +3,52 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 .nav-header .wix {
   text-decoration: none;
-  color: rgba(2, 189, 189, 0.92); }
+  color: #f4f4f4; }
 
-.nav-header .app-name .App-logo {
-  width: 150px;
-  height: 210px; }
-
-.nav-header .app-name .App-title {
-  color: rgba(246, 70, 174, 0.82); }
+.nav-header .app-name {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; }
+  .nav-header .app-name .App-logo {
+    width: 120px;
+    height: 150px; }
+  .nav-header .app-name .App-title {
+    color: #EFE3F2; }
 
 .nav-header .Links {
-  color: rgba(205, 69, 251, 0.83);
-  text-decoration: none; }
+  color: #253D5B;
+  text-decoration: none;
+  background-color: #4CE0B3;
+  width: 70px;
+  border: solid 5px #f4f4f4;
+  border-radius: 10px; }
 
 .nav-header .App-header {
-  background-color: rgba(2, 189, 189, 0.82);
-  height: 300px;
+  background-color: #F7A9A8;
+  height: 200px;
   padding: 20px;
   color: #F9A78E;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: flex-end; }
 
 .nav-header .Nav-Bar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: rgba(251, 219, 159, 0.5); }
+  background-color: #377771;
+  border: solid 8px #ED6A5E;
+  border-radius: 12px; }
 
 .nav-header .Login-button {
-  background-color: #c7f2f4;
+  background-color: #E5C3D1;
   text-decoration: none;
-  color: rgba(246, 70, 174, 0.82);
+  color: #7048b6;
   height: 30px;
   width: 50px;
-  border: solid;
-  border-color: #9000B6;
+  border: solid black;
   border-radius: 7px; }
 
 .nav-header .login {

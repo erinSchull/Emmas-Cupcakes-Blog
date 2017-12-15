@@ -3,19 +3,26 @@ import axios from 'axios';
 
 let initialState ={
     user: [],
-    orders: [],
+    orders: [{
+        status: '',
+        cake: '',
+        filling: '',
+        frosting: '',
+        topping: '',
+        quantity: null,
+        total: null
+    }],
     is_admin: false,
-    blogs: []
+    blogs: [],
+    cart: []
 }
 
 
 const GET_USER = 'GET_USER';
 const GET_ORDER = 'GET_ORDER';
-const ALL_ORDERS = 'ALL_ORDERS';
+const ADMIN_ORDERS = 'ADMIN_ORDERS';
 const ADD_ORDER = 'ADD_ORDER';
 const GET_ADMIN = 'GET_ADMIN';
-const GET_BLOG = 'GET_BLOG';
-const ADD_BLOG = 'ADD_BLOG';
 const GET_USER_ORDER = 'GET_USER_ORDER';
 const ADD_TOTAL = 'ADD_TOTAL';
 const DELETE_ORDER = 'DELETE_ORDER';
@@ -34,7 +41,7 @@ export function getUser() { //action builder//
     }
 };
 
-export function getOrder() {
+export function getOrder(orderid) {
     const order = axios.get(`/api/order/${orderid}`)
     .then(res => {
         return res.data
@@ -51,7 +58,7 @@ export function readOrders() {
         return res.data
     })
     return {
-        type: ALL_ORDERS,
+        type: ADMIN_ORDERS,
         payload: orders
     }
 };
@@ -66,29 +73,8 @@ export function getAdmin() {
     }
 };
 
-export function getBlog(blogid) {
-    const blog = axios.get(`/api/${blogid}`).then(res => {
-        return res.data
-    })
-    return {
-        type: GET_BLOG,
-        payload: blog
-    }
-};
-
-export function addBlog(blogid) {
-    const blog = axios.post(`/api/${blogid}`)
-    .then(res => {
-        return res.data
-    })
-    return {
-        type: ADD_BLOG,
-        payload: blog
-    }
-};
-
-export function userOrder(userid) {
-    const userOrder = axios.get(`/api/order/${userid}`)
+export function userOrder(usersid) {
+    const userOrder = axios.get(`/api/order/${usersid}`)
     .then(res => {
         return res.data
     })
@@ -98,8 +84,8 @@ export function userOrder(userid) {
     }
 };
 
-export function addOrder() {
-    const addOrder = axios.post(`/api/order/${orderid}`)
+export function addOrder(usersid, body) {
+    const addOrder = axios.post(`/api/order/${usersid}`, body)
     .then(res => {
         return res.data
     })
@@ -108,7 +94,7 @@ export function addOrder() {
         payload: addOrder
     }
 };
-export function addTotal(total) {
+export function addTotal(orderid) {
     const addTotal = axios.post(`/api/order/${orderid}`)
     .then(res => {
         return res.data
@@ -146,7 +132,7 @@ export default function reducer(state = initialState, action){
         return Object.assign({}, state, {user: action.payload});
         case GET_ORDER + '_FULFILLED':
         return Object.assign({}, state, {orders: action.payload});
-        case ALL_ORDERS + '_FULFILLED':
+        case ADMIN_ORDERS + '_FULFILLED':
         return Object.assign({}, state, {orders: action.payload});
         case GET_ADMIN + '_FULFILLED':
         return Object.assign({}, state, {user: action.payload});

@@ -2,8 +2,8 @@
 //come back and make this part of the conditional render in blog previews after presentation
 
 import React, { Component } from 'react';
-import winterFormal from './../../images/winter-formal.jpg';
-import cupcake from './../../images/cupcake.jpg';
+import winterFormal from './../../../images/winter-formal.jpg';
+import cupcake from './../../../images/cupcake.jpg';
 
 import './BlogPost3.css';
 
@@ -12,7 +12,7 @@ class BlogPost3 extends Component {
         return (
             <div className='blog3' >
                 <div className='blog3-intro' >
-                    <img src={cupcake} className='cupcake-title' />
+                    <img src={cupcake} className='cupcake-title' alt='yellow cupcake' />
                     <h2>Killer Cupcakes</h2>
                 </div>
                 <div className-='blog3-body'>

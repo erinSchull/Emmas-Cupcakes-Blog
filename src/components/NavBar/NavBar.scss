@@ -1,51 +1,59 @@
 @import './../../_variables.scss';
 
 .nav-header {
-
     .wix {
         text-decoration: none;
-        color: rgba(2, 189, 189, 0.92);
+        color: #f4f4f4;
     }
     .app-name{
-        
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         .App-logo {
-            width: 150px;
-            height: 210px;
+            width: 120px;
+            height: 150px;
         }
         .App-title {
         color: $headerTextColor;
         }
     }
     .Links {
-        color: rgba(205, 69, 251, 0.83);
+        color: $linkTextColor;
         text-decoration: none;
+        background-color: $linkBackgroundColor;
+        width: 70px;
+        border: $linkBorder;
+        border-radius: 10px;
     }
     .App-header {
         background-color: $headerColor;
-        height: 300px;
+        height: 200px;
         padding: 20px;
         color: #F9A78E;
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         align-items: flex-end;
     }
     .Nav-Bar {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: rgba(251, 219, 159, 0.50);
+    background-color: $navBackground;
+    border: $navBorder;
+    border-radius: 12px;
     }                                                                
     
     
     
     .Login-button {
-        background-color: rgb(199, 242, 244);
+        background-color: $loginButtonBackground;
         text-decoration: none;
-        color: $headerTextColor;
+        color: $loginButtonTextColor;
         height: 30px;
         width: 50px;
-        border: solid;
-        border-color: #9000B6;
+        border: $loginButtonBorder;
         border-radius: 7px;
     }
     .login{

@@ -7,7 +7,7 @@ module.exports = {
         })
 
     },
-    getAll: (req, res, next) => {
+    getAllOrders: (req, res, next) => {
         const db = req.app.get('db');
         db.read_orders()
         .then (response => {
@@ -16,23 +16,17 @@ module.exports = {
     },
     addOrder: (req, res, next) => {
         const db = req.app.get('db');
-        const {quantity, cake, frosting, filling, topping, total} = req.body;
-        db.add_order([quantity, cake, frosting, filling, topping, total])
-        .then (response => {
-            res.status(200).send(response)
-        })
-    },
-    addTotal: (req, res, next) => {
-        const db = req.app.get('db');
-        const { total, orderid } = req.body;
-        db.add_order_total([orderid, total])
+        const {status, quantity, cake, frosting, filling, topping, total} = req.body;
+        console.log('do i have the right req.user.id : ', req.user.id);
+        db.add_order([status, quantity, cake, frosting, filling, topping, total, req.user.id])
         .then (response => {
             res.status(200).send(response)
         })
     },
     deleteOrder: (req, res, next) => {
         const db = req.app.get('db');
-        db.delete_order(req.params.id)
+        console.log('req.params.orderid', req.params.orderid);
+        db.delete_order(req.params.orderid)
         .then(response => {
             res.status(200).send(response)
         })
@@ -41,7 +35,7 @@ module.exports = {
         const db = req.app.get('db');
         console.log(req.body);
         const { status } = req.body;
-        db.update_status([req.params.id, status])
+        db.update_status([status, req.params.id])
         .then(response =>{
             res.status(200).send(response)
         })
