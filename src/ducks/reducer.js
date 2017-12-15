@@ -136,8 +136,6 @@ export default function reducer(state = initialState, action){
         return Object.assign({}, state, {orders: action.payload});
         case GET_ADMIN + '_FULFILLED':
         return Object.assign({}, state, {user: action.payload});
-        case GET_BLOG + '_FULFILLED':
-        return Object.assign({}, state, {blogs: action.payload});
         case GET_USER_ORDER + '_FULFILLED':
         return Object.assign({}, state, {orders: action.payload});
         case ADD_ORDER + '_FULFILLED':

@@ -123,19 +123,19 @@ class OrderForm extends Component {
                     <div classname='frostings' >
                         {/* fix me next!! */}
                         <h4>Frosting Flavors</h4>
-                        <p><input type='radio' name='frosting' value={this.state.frosting} onClick={this.props.addOrder(frosting)} />Creme Cheese</p>
-                        <p><input type='radio' name='frosting' value={this.state.frosting} onClick={this.props.addOrder(frosting)} />Butter Cream</p>
-                        <p><input type='radio' name='frosting' value={this.state.frosting} onClick={this.props.addOrder(frosting)} />Chocolate Creme Cheese</p>
-                        <p><input type='radio' name='frosting' value={this.state.frosting} onClick={this.props.addOrder(frosting)} />Brown Sugar</p>
-                        <p><input type='radio' name='frosting' value={this.state.frosting} onClick={this.props.addOrder(frosting)} />Chocolate Ganache</p>
+                        <p><input type='radio' name='frosting' value={this.state.frosting} onClick={this.handleFrostingInput} />Creme Cheese</p>
+                        <p><input type='radio' name='frosting' value={this.state.frosting} onClick={this.handleFrostingInput} />Butter Cream</p>
+                        <p><input type='radio' name='frosting' value={this.state.frosting} onClick={this.handleFrostingInput} />Chocolate Creme Cheese</p>
+                        <p><input type='radio' name='frosting' value={this.state.frosting} onClick={this.handleFrostingInput} />Brown Sugar</p>
+                        <p><input type='radio' name='frosting' value={this.state.frosting} onClick={this.handleFrostingInput} />Chocolate Ganache</p>
                     </div>
                     <div className='toppings'>
                         <h4>Toppings</h4>
-                        <p><input type='radio' name='topping' value={this.state.topping} onClick={addOrder.topping} />Theme Rings</p>
-                        <p><input type='radio' name='topping' value={this.state.topping} onClick={addOrder.topping} />Graham Crackers</p>
-                        <p><input type='radio' name='topping' value={this.state.topping} onClick={addOrder.topping} />Sprinkles</p>
-                        <p><input type='radio' name='topping' value={this.state.topping} onClick={addOrder.topping} />Fondant theme decor</p>
-                        <p><input type='radio' name='topping' value={this.state.topping} onClick={addOrder.topping} />Powdered sugar design</p>
+                        <p><input type='radio' name='topping' value={this.state.topping} onClick={this.handleToppingInput} />Theme Rings</p>
+                        <p><input type='radio' name='topping' value={this.state.topping} onClick={this.handleToppingInput} />Graham Crackers</p>
+                        <p><input type='radio' name='topping' value={this.state.topping} onClick={this.handleToppingInput} />Sprinkles</p>
+                        <p><input type='radio' name='topping' value={this.state.topping} onClick={this.handleToppingInput} />Fondant theme decor</p>
+                        <p><input type='radio' name='topping' value={this.state.topping} onClick={this.handleToppingInput} />Powdered sugar design</p>
                     </div>
                     <div>
                         <h4>How Many do You Want?</h4>

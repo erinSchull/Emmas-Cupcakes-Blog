@@ -20,8 +20,9 @@ class AdminProfile extends Component{
         this.props.readOrders();
     }
     render(){
+        const admin = this.props.user;
         return(
-            <h3>This will have all the same shtuff as the current profile</h3>
+            <h3>Welcome Back, Admin {admin.first_name}</h3>
         )
     }
 }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Profile.css';
 import { connect } from 'react-redux';
+import AdminProfile from './../AdminProfile/AdminProfile';
+
 import { getUser, userOrder } from './../../ducks/reducer';
 
 class Profile extends Component {
@@ -12,18 +14,17 @@ class Profile extends Component {
         }
     }
 
+    
     componentDidMount() {
         this.props.getUser();
         this.props.userOrder(this.props.user.userid);
-        this.props.getAdmin();
-        this.props.readOrders();
     }
 
     render() {
-
+        const adminOrNah = this.props.is_admin ? < AdminProfile /> : null
         const { orders } = this.props.orders;
         const users = this.props.user;
-        console.log('am I getting the proper userid?', this.props.user.userid)
+        console.log('am I getting the proper userid?', this.props.user.id)
         return (
             <div>
                 <div className='profile-title'>
@@ -47,12 +48,12 @@ class Profile extends Component {
                             </div> : 'Order information will show after you login'
                         }
                         {/* all admin rendering is crap. do this in own component */}
-                        {users.is_admin ? 
+                        {/*{users.is_admin ? 
                             <div>{orders.map((item, i) => {
                                 return <div key={i}>{item.orderid}</div>
                             })}
                             </div> : null
-                        }
+                        }*/}
                     </div>
 
                     <div className='columns'>
@@ -63,12 +64,12 @@ class Profile extends Component {
                             }) : null }
                             </div> : null
                         }
-                        {users.is_admin ?
+                        {/*{users.is_admin ?
                             <div>{orders.map((item, i) => {
                                 return <div key={i}>{item.cake}</div>
                             })}
                             </div> : null
-                        }
+                        }*/}
 
                     </div>
 
@@ -80,12 +81,12 @@ class Profile extends Component {
                             }) : null }
                             </div> : null
                         }
-                        {users.is_admin ?
+                        {/*{users.is_admin ?
                             <div>{orders.map((item, i) => {
                                 return <div key={i}>{item.frosting}</div>
                             })}
                             </div> : null
-                        }
+                        }*/}
 
                     </div>
                     <div className='columns'>
@@ -96,12 +97,12 @@ class Profile extends Component {
                             }) : null }
                             </div> : null
                         }
-                        {users.is_admin ?
+                       {/* {users.is_admin ?
                             <div>{orders.map((item, i) => {
                                 return <div key={i}>{item.filling}</div>
                             })}
                             </div> : null
-                        }
+                        }*/}
                     </div>
 
 
@@ -113,12 +114,12 @@ class Profile extends Component {
                             }) : null }
                             </div> : null
                         }
-                        {users.is_admin ?
+                        {/*{users.is_admin ?
                             <div>{ this.props.orders ? orders.map((item, i) => {
                                 return <div key={i}>{item.topping}</div>
                             }) : null}
                             </div> : null
-                        }
+                        }*/}
                     </div>
                     <div className='columns'>
                         <p className='tabs'>Quantity</p>
@@ -128,12 +129,12 @@ class Profile extends Component {
                             }) : null }
                             </div> : null
                         }
-                        {users.is_admin ?
+                        {/*{users.is_admin ?
                             <div>{orders.map((item, i) => {
                                 return <div key={i}>{item.quantity}</div>
                             })}
                             </div> : null
-                        }
+                        }*/}
                     </div>
                     <div className='columns'>
                         <p className='tabs'>Status</p>
@@ -143,7 +144,7 @@ class Profile extends Component {
                             }) : null }
                             </div> : null
                         }
-                        {users.is_admin ?
+                        {/* {users.is_admin ?
                             <div>
                                 <select>
                                     <option onClick={updateStatus} >Submitted</option>
@@ -153,7 +154,7 @@ class Profile extends Component {
                                     <option onClick={updateStatus}>Out For Delivery</option>
                                 </select>
                             </div> :
-                            null}
+                            null} */}
                     </div>
                     <div className='columns' >
                         <p className='tabs'>Total</p>
@@ -163,24 +164,24 @@ class Profile extends Component {
                             })}
                             </div> : null
                         }
-                        {users.is_admin ?
+                        {/*{users.is_admin ?
                             <div>{orders.map((item, i) => {
                                 return <div key={i}>{item.quantity}</div>
                             })}
                             </div> : null
-                        }
+                        }*/}
                     </div>
                     <div className='columns' >
                         <p className='tabs'>Delete Orders</p>
                     
-                        {users.is_admin ?
+                        {/*{users.is_admin ?
                             <div>{orders.map((item, i) => {
                                 return <div key={i}>
                                 <button onClick={this.props.deleteOrder(orderid)}>Delete This Order</button>
                                 </div>
                             })}
                             </div> : null
-                        }
+                        }*/}
                     </div>
                 </div>
             </div>
@@ -196,4 +197,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, { getUser, userOrder })(Profile);
+export default connect(mapStateToProps, { getUser, userOrder})(Profile);
