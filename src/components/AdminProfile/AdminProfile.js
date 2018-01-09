@@ -8,7 +8,7 @@ class AdminProfile extends Component{
         super(props);
 
         this.state ={
-            userInfo: [],
+            user: [],
             orders: [{
                 status: ''
             }]
@@ -30,7 +30,7 @@ class AdminProfile extends Component{
 function mapStateToProps(state){
     console.log('variable state from adminProfile', state)
     return {
-        user: state.userInfo,
+        user: state.user,
         orders: state.orders
     }
 }

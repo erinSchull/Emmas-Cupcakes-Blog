@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Profile.css';
+
 import { connect } from 'react-redux';
-import AdminProfile from './../AdminProfile/AdminProfile';
+// import AdminProfile from './../AdminProfile/AdminProfile';
 
 import { getUser, userOrder } from './../../ducks/reducer';
 
@@ -9,7 +9,7 @@ class Profile extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userInfo: {},
+            user: {},
             orders: []
         }
     }
@@ -21,10 +21,9 @@ class Profile extends Component {
     }
 
     render() {
-        const adminOrNah = this.props.is_admin ? < AdminProfile /> : null
-        const { orders } = this.props.orders;
+        const orders  = this.props.orders;
         const users = this.props.user;
-        console.log('am I getting the proper userid?', this.props.user.id)
+        console.log('am I getting the proper userid?', this.props.user);
         return (
             <div>
                 <div className='profile-title'>
@@ -45,7 +44,7 @@ class Profile extends Component {
                                 return <div key={i}>{item.orderid}</div>
                             }) : 'Please place an order!'
                         }
-                            </div> : 'Order information will show after you login'
+                            </div> : 'Order'
                         }
                         {/* all admin rendering is crap. do this in own component */}
                         {/*{users.is_admin ? 
@@ -62,7 +61,7 @@ class Profile extends Component {
                             <div>{ this.props.orders ?orders.map((item, i) => {
                                 return <div key={i}>{item.cake}</div>
                             }) : null }
-                            </div> : null
+                            </div> : 'information'
                         }
                         {/*{users.is_admin ?
                             <div>{orders.map((item, i) => {
@@ -79,7 +78,7 @@ class Profile extends Component {
                             <div>{ this.props.orders ? orders.map((item, i) => {
                                 return <div key={i}>{item.frosting}</div>
                             }) : null }
-                            </div> : null
+                            </div> : 'will'
                         }
                         {/*{users.is_admin ?
                             <div>{orders.map((item, i) => {
@@ -95,7 +94,7 @@ class Profile extends Component {
                             <div>{ this.props.orders ? orders.map((item, i) => {
                                 return <div key={i}>{item.filling}</div>
                             }) : null }
-                            </div> : null
+                            </div> : 'show'
                         }
                        {/* {users.is_admin ?
                             <div>{orders.map((item, i) => {
@@ -112,7 +111,7 @@ class Profile extends Component {
                             <div>{ this.props.orders ? orders.map((item, i) => {
                                 return <div key={i}>{item.topping}</div>
                             }) : null }
-                            </div> : null
+                            </div> : 'after'
                         }
                         {/*{users.is_admin ?
                             <div>{ this.props.orders ? orders.map((item, i) => {
@@ -127,7 +126,7 @@ class Profile extends Component {
                             <div>{ this.props.orders ? orders.map((item, i) => {
                                 return <div key={i}>{item.quantity}</div>
                             }) : null }
-                            </div> : null
+                            </div> : 'you'
                         }
                         {/*{users.is_admin ?
                             <div>{orders.map((item, i) => {
@@ -142,7 +141,7 @@ class Profile extends Component {
                             <div>{ this.props.orders ? orders.map((item, i) => {
                                 return <div key={i}>{item.status}</div>
                             }) : null }
-                            </div> : null
+                            </div> : 'log'
                         }
                         {/* {users.is_admin ?
                             <div>
@@ -162,7 +161,7 @@ class Profile extends Component {
                             <div>{orders.map((item, i) => {
                                 return <div key={i}>{item.quantity}</div>
                             })}
-                            </div> : null
+                            </div> : 'in'
                         }
                         {/*{users.is_admin ?
                             <div>{orders.map((item, i) => {
@@ -171,18 +170,18 @@ class Profile extends Component {
                             </div> : null
                         }*/}
                     </div>
-                    <div className='columns' >
+                   {/* <div className='columns' >
                         <p className='tabs'>Delete Orders</p>
                     
-                        {/*{users.is_admin ?
+                        {users.is_admin ?
                             <div>{orders.map((item, i) => {
                                 return <div key={i}>
                                 <button onClick={this.props.deleteOrder(orderid)}>Delete This Order</button>
                                 </div>
                             })}
                             </div> : null
-                        }*/}
-                    </div>
+                        }
+                    </div>*/}
                 </div>
             </div>
         )
@@ -192,7 +191,7 @@ class Profile extends Component {
 function mapStateToProps(state) {
     console.log("state from profile", state)
     return {
-        user: state.userInfo,
+        user: state.user,
         orders: state.orders
     }
 }

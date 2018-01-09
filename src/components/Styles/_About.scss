@@ -1,0 +1,16 @@
+.about-page{
+    width: 100%;
+    margin-right: 25px;
+    margin-left: 25px;
+    .about-Text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .freepik-link {
+        text-decoration: none;
+    }
+    .flaticon-link {
+        text-decoration: none;
+    }
+}

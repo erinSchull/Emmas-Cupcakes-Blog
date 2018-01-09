@@ -12,9 +12,7 @@ let initialState ={
         quantity: null,
         total: null
     }],
-    is_admin: false,
-    blogs: [],
-    cart: []
+    is_admin: false
 }
 
 
@@ -74,7 +72,7 @@ export function getAdmin() {
 };
 
 export function userOrder(usersid) {
-    const userOrder = axios.get(`/api/order/${usersid}`)
+    const userOrder = axios.get(`/api/user/order/${usersid}`)
     .then(res => {
         return res.data
     })
@@ -94,18 +92,8 @@ export function addOrder(usersid, body) {
         payload: addOrder
     }
 };
-export function addTotal(orderid) {
-    const addTotal = axios.post(`/api/order/${orderid}`)
-    .then(res => {
-        return res.data
-    })
-    return {
-        type: ADD_TOTAL,
-        payload: addTotal
-    }
-};
 export function deleteOrder(orderid) {
-    const deleteOrder = axios.delete(`/api/order/${orderid}`)
+    const deleteOrder = axios.delete(`/api/delete/order/${orderid}`)
     .then(res => {
         return res.data
     })
@@ -115,7 +103,7 @@ export function deleteOrder(orderid) {
     }
 };
 export function updateStatus(orderid) {
-    const updateStatus = axios.put(`/api/order/${orderid}`)
+    const updateStatus = axios.put(`/api/status/order/${orderid}`)
     .then(res => {
         return res.data
     })

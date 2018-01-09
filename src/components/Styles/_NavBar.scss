@@ -1,5 +1,3 @@
-@import './../../_variables.scss';
-
 .nav-header {
     .wix {
         text-decoration: none;
@@ -10,6 +8,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        width: 300px;
         .App-logo {
             width: 120px;
             height: 150px;
@@ -30,7 +29,7 @@
         background-color: $headerColor;
         height: 200px;
         padding: 20px;
-        color: #F9A78E;
+        color: $linkTextColor;
         display: flex;
         flex-direction: row;
         justify-content: space-between;

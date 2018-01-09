@@ -1,0 +1,49 @@
+.shop-titles{
+    h1{
+    color: $shopTextColor;
+    font-family: $shopTitles;
+    }
+    h2{
+        color: rgb(12, 5, 20);
+    }
+}
+.spec-cupcakes {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-around
+    img{
+        height: 150px;
+        width: 100px;
+    }
+}
+.custom-cakes{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .cakes{
+        display: flex;
+        flex-flow: column;
+    }
+    .fillings{
+        display: flex;
+        flex-flow: column;
+    }
+    .frostings {
+        display: flex;
+        flex-flow: column;
+    }
+    .toppings{
+        display: flex;
+        flex-flow: column;
+    }
+}
+.order-button{
+    background-color: $buttonBackground;
+    border: $buttonBorder;
+    border-radius: 7px;
+    color: $buttonTextColor;
+    width: 250px;
+    font-size: 20px;   
+}

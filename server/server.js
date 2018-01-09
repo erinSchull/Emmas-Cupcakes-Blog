@@ -105,7 +105,7 @@ app.post('/api/payment', function(req, res, next){
 
 app.get('/auth', passport.authenticate('auth0')); //just how this library was written
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/#/', //where we're running our front end
+    successRedirect: 'http://localhost:3000/#/profile', //where we're running our front end
     failureRedirect: '/auth'
 }))
 app.get('/auth/me', (req, res) => {
@@ -134,15 +134,16 @@ passport.deserializeUser(function (id, done) {
 
 //db order endpoints 
 //oh my hell these are crap 12/14
-app.get('/api/user/order/:usersid', orderCtrl.getOrder);
+app.get('/api/user/order/:userid', orderCtrl.getOrder);
 app.post('/api/order/:usersid', orderCtrl.addOrder);
 app.put('/api/order/status/:orderid', orderCtrl.updateStatus);
-app.delete('/api/order/:orderid', orderCtrl.deleteOrder);
+app.delete('/api/delete/order/:orderid', orderCtrl.deleteOrder);
+app.get('/api/orders', orderCtrl.getAllOrders);
 
 //db user endpoints
 app.get('/api/admin', ctrl.getAdmin);
 app.get('/api/user', ctrl.getUser);
-app.get('/api/orders/:usersid', ctrl.getOrdersOnUser);
+app.get('/api/orders/:userid', ctrl.getOrdersOnUser);
 
 
 const PORT = 3005;

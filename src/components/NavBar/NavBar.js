@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './../../images/cupcake-logo.png';
-import './NavBar.css';
+
 import { getUser } from './../../ducks/reducer';
 import { connect } from 'react-redux';
 
@@ -57,7 +57,7 @@ class NavBar extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log("state from private", state)
+    console.log("state from navBar", state)
     return {
         user: state.user
     }

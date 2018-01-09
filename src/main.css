@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Dosis");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a:link {
+  color: black;
+  text-decoration: none; }
+
+a:visited {
+  color: #320f92;
+  text-decoration: none; }
+
+.hello-blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+  .hello-blog h2 {
+    font-family: "Playfair Display", serif; }
+  .hello-blog p {
+    font-family: "Open Sans", sans-serif; }
+  .hello-blog button {
+    height: 30px;
+    font-size: 12px; }
+
+.blog3-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  .blog3-intro h2 {
+    font-family: "Playfair Display", serif; }
+
+.blog3 {
+  display: flex;
+  flex-direction: column; }
+  .blog3 button {
+    height: 30px;
+    width: 125px;
+    background-color: rgba(230, 53, 247, 0.83);
+    font-size: 12px;
+    color: white; }
+
+.blog3-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  .blog3-body p {
+    font-family: "Open Sans", sans-serif;
+    display: flex; }
+  .blog3-body .silver-cupcake {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 200px; }
+
+.blog-previews h3 {
+  font-family: "Playfair Display", serif;
+  color: #EFE3F2; }
+
+.blog-previews p {
+  font-family: 'Dosis', sans-serif;
+  text-decoration: none;
+  color: #0F0137;
+  font-size: 20px; }
+
+.foo-bar {
+  background-color: #4F2540;
+  color: #EFE3F2; }
+
+.nav-header .wix {
+  text-decoration: none;
+  color: #f4f4f4; }
+
+.nav-header .app-name {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 300px; }
+  .nav-header .app-name .App-logo {
+    width: 120px;
+    height: 150px; }
+  .nav-header .app-name .App-title {
+    color: #EFE3F2; }
+
+.nav-header .Links {
+  color: #253D5B;
+  text-decoration: none;
+  background-color: #4CE0B3;
+  width: 70px;
+  border: solid 5px #F6EFEE;
+  border-radius: 10px; }
+
+.nav-header .App-header {
+  background-color: #93B7BE;
+  height: 200px;
+  padding: 20px;
+  color: #253D5B;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end; }
+
+.nav-header .Nav-Bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #F7BCB7;
+  border: solid 8px #f6efee;
+  border-radius: 12px; }
+
+.nav-header .Login-button {
+  background-color: #E5C3D1;
+  text-decoration: none;
+  color: #7048b6;
+  height: 30px;
+  width: 50px;
+  border: solid black;
+  border-radius: 7px; }
+
+.nav-header .login {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+  .nav-header .login .login-content {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 60px; }
+
+.auth-info {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  border-bottom: solid 5px #4f2540; }
+  .auth-info .first-name {
+    font-size: 21px;
+    color: #2f3f47; }
+  .auth-info .last-name {
+    font-size: 21px;
+    color: #2f3f47; }
+  .auth-info .email {
+    font-size: 18px;
+    color: #2f3f47; }
+
+.shop-titles h1 {
+  color: #4F2540;
+  font-family: "Josefin Sans", sans-serif; }
+
+.shop-titles h2 {
+  color: #0c0514; }
+
+.spec-cupcakes {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-around img;
+    justify-content-height: 150px;
+    justify-content-width: 100px; }
+
+.custom-cakes {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .custom-cakes .cakes {
+    display: flex;
+    flex-flow: column; }
+  .custom-cakes .fillings {
+    display: flex;
+    flex-flow: column; }
+  .custom-cakes .frostings {
+    display: flex;
+    flex-flow: column; }
+  .custom-cakes .toppings {
+    display: flex;
+    flex-flow: column; }
+
+.order-button {
+  background-color: #f7bcb7;
+  border: solid 5px #93b7be;
+  border-radius: 7px;
+  color: #f6efee;
+  width: 250px;
+  font-size: 20px; }
+
+.about-page {
+  width: 100%;
+  margin-right: 25px;
+  margin-left: 25px; }
+  .about-page .about-Text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .about-page .freepik-link {
+    text-decoration: none; }
+  .about-page .flaticon-link {
+    text-decoration: none; }

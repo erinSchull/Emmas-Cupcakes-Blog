@@ -1,0 +1,19 @@
+.auth-info{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    border-bottom: solid 5px #4f2540;
+    .first-name {
+        font-size: 21px;
+        color: #2f3f47;
+    }
+    .last-name{
+        font-size: 21px;
+        color: #2f3f47;
+    }
+    .email{
+        font-size: 18px;
+        color: #2f3f47;
+    }
+}

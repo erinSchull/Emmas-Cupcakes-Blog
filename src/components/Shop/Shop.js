@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Shop.css';
+
 import {getUser} from './../../ducks/reducer';
 import {connect} from 'react-redux';
 
@@ -15,7 +15,7 @@ class Shop extends Component {
 
     render() {
         return (
-            <div>
+            <div className='shop-titles'>
                 <h1 className='shop-intro' >Welcome to Emma's Cupcake Shop!</h1>
                 <h2 className='premade-title' >Cupcakes I've Made</h2>
                 <div className='spec-cupcakes' >

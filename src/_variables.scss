@@ -3,17 +3,21 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 //header variables
-$headerColor: #F7A9A8;
+$headerColor: #93B7BE;
 $headerTextColor: #EFE3F2;
 // $headerBorder
 $linkTextColor: #253D5B;
 $linkBackgroundColor: #4CE0B3;
-$linkBorder: solid 5px #f4f4f4;
-$navBorder: solid 8px #ED6A5E;
-$navBackground: #377771;
+$linkBorder: solid 5px #F6EFEE;
+$navBorder: solid 8px #f6efee;
+$navBackground: #F7BCB7;
 $loginButtonBackground: #E5C3D1;
 $loginButtonTextColor: #7048b6;
 $loginButtonBorder: solid black;
+
+//footer variables
+$footerBackgroundColor: #4F2540;
+$footerTextColor: #EFE3F2;
 
 //blog variables
 $blogText: 'Open Sans', sans-serif;
@@ -28,4 +32,7 @@ $buttonWidth: 125px;
 //shop variables
 $shopDetails: 'Dosis', sans-serif;
 $shopTitles: 'Josefin Sans', sans-serif;
-
+$shopTextColor: #4F2540;
+$buttonBackground: #f7bcb7;
+$buttonTextColor: #f6efee;
+$buttonBorder: solid 5px #93b7be;

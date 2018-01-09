@@ -24,6 +24,7 @@
     "react-stripe-checkout": "^2.6.3",
     "redux": "^3.7.2",
     "redux-promise-middleware": "^4.4.1",
+    "sass": "^1.0.0-beta.4",
     "stripe": "^5.2.0"
   },
   "scripts": {
@@ -34,5 +35,5 @@
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }  
+  }
 }

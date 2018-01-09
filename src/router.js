@@ -16,9 +16,6 @@ import Profile from './components/Profile/Profile';
 export default (
     <div>
         <Switch>
-            <Route component={NavBar} />
-        </Switch>
-        <Switch>
             <Route component={Home} exact path='/' />
             <Route component={Order} path='/shop/orderform' />
             <Route component={BlogPreviews} path='/previews' />
