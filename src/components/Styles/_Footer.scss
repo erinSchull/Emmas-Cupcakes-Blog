@@ -1,4 +1,7 @@
 .foo-bar{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
     background-color: $footerBackgroundColor;
     color: $footerTextColor;
     height: 45px;

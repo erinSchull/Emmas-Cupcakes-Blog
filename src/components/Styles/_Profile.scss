@@ -1,5 +1,8 @@
-.auth-info{
+.profile {
+    height: $pageHeight;
+    .auth-info{
     width: 90%;
+    padding: 7px;
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -16,4 +19,5 @@
         font-size: 18px;
         color: #2f3f47;
     }
+}
 }

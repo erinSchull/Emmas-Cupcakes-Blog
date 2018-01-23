@@ -25,7 +25,7 @@ class Profile extends Component {
         const users = this.props.user;
         console.log('am I getting the proper userid?', this.props.user);
         return (
-            <div>
+            <div className='profile' >
                 <div className='profile-title'>
                     <h2>It's All About You Here</h2>
                 </div>
