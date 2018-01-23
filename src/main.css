@@ -52,6 +52,32 @@ a:visited {
   color: #320f92;
   text-decoration: none; }
 
+.App {
+  text-align: center;
+  height: 100%; }
+
+.home-Div {
+  height: 65vh;
+  padding: 5px; }
+  .home-Div .home-title {
+    padding: 3px;
+    font-size: 40px;
+    color: rgba(246, 70, 174, 0.82); }
+  .home-Div .Home-intro {
+    padding: 3px;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    color: #9342F3; }
+  .home-Div .entry-button {
+    background-color: rgba(0, 255, 195, 0.83);
+    border-color: #9000B6;
+    border-radius: 7px;
+    height: 30px;
+    width: 150px;
+    font-size: 20px;
+    color: #240087;
+    border-width: 3px; }
+
 .hello-blog {
   display: flex;
   flex-direction: column;
@@ -106,7 +132,10 @@ a:visited {
 
 .foo-bar {
   background-color: #4F2540;
-  color: #EFE3F2; }
+  color: #EFE3F2;
+  height: 45px; }
+  .foo-bar .foo-title {
+    text-align: center; }
 
 .nav-header .wix {
   text-decoration: none;
@@ -197,9 +226,11 @@ a:visited {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
-  justify-content: space-around img;
-    justify-content-height: 150px;
-    justify-content-width: 100px; }
+  justify-content: space-around; }
+  .spec-cupcakes div img {
+    height: 150px;
+    width: 100px;
+    border-radius: 30px; }
 
 .custom-cakes {
   display: flex;

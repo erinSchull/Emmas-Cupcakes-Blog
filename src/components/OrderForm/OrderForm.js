@@ -60,10 +60,11 @@ class OrderForm extends Component {
         })
     }
     updateTotal() {
-        var calcTotal = (this.state.quantity * 80);
+        var calcTotal = (this.state.quantity * 8000);
         this.setState({
             total: calcTotal
         })
+
     }
     handleClick() {
         let body = {
@@ -107,16 +108,16 @@ class OrderForm extends Component {
                         <h4>Filling Flavors</h4>
                         <ol>
                             <li>Liquid</li>
-                            <p><input type='radio' name='liquid' value={this.state.filling} onClick={this.handleFillingInput} />Marshmallow</p>
-                            <p><input type='radio' name='liquid' value={this.state.filling} onClick={this.handleFillingInput} />Nutella</p>
-                            <p><input type='radio' name='liquid' value={this.state.filling} onClick={this.handleFillingInput} />Raspberry Marshmallow</p>
-                            <p><input type='radio' name='liquid' value={this.state.filling} onClick={this.handleFillingInput} />Lemon Curd</p>
-                            <p><input type='radio' name='liquid' value={this.state.filling} onClick={this.handleFillingInput} />Creme Cheese</p>
+                            <p><input type='radio' name='filling' value={this.state.filling} onClick={this.handleFillingInput} />Marshmallow</p>
+                            <p><input type='radio' name='filling' value={this.state.filling} onClick={this.handleFillingInput} />Nutella</p>
+                            <p><input type='radio' name='filling' value={this.state.filling} onClick={this.handleFillingInput} />Raspberry Marshmallow</p>
+                            <p><input type='radio' name='filling' value={this.state.filling} onClick={this.handleFillingInput} />Lemon Curd</p>
+                            <p><input type='radio' name='filling' value={this.state.filling} onClick={this.handleFillingInput} />Creme Cheese</p>
 
                             <li>Solid</li>
-                            <p><input type='radio' name='solid' value={this.state.filling} onClick={this.handleFillingInput} />M&M's</p>
-                            <p><input type='radio' name='solid' value={this.state.filling} onClick={this.handleFillingInput} /> Marshmallows</p>
-                            <p><input type='radio' name='solid' value={this.state.filling} onClick={this.handleFillingInput} /> Cookie Dough</p>
+                            <p><input type='radio' name='filling' value={this.state.filling} onClick={this.handleFillingInput} />M&M's</p>
+                            <p><input type='radio' name='filling' value={this.state.filling} onClick={this.handleFillingInput} /> Marshmallows</p>
+                            <p><input type='radio' name='filling' value={this.state.filling} onClick={this.handleFillingInput} /> Cookie Dough</p>
                         </ol>
                     </div>
 
@@ -139,7 +140,7 @@ class OrderForm extends Component {
                     </div>
                     <div>
                         <h4>How Many do You Want?</h4>
-                        <select onClick={addOrder.quantity} >
+                        <select name="quantity" onClick={this.handleQuantityInput} >
                             <option value="6" >6</option>
                             <option value="12">12</option>
                             <option value="18">18</option>
@@ -148,7 +149,7 @@ class OrderForm extends Component {
                     </div>
                 </div>
                 <div>
-                    <button onClick={this.handleClick}>Show me my damage!</button>
+                    <button onClick={this.updateTotal}>Show me my damage!</button>
                     <p>{this.state.total}</p>
                 </div>
                 <div className='stripe-checkout'>
@@ -157,7 +158,7 @@ class OrderForm extends Component {
                         onClick={this.handleClick}
                         token={this.onToken}
                         stripeKey={stripe.pub_key}
-                        amount={40000}
+                        amount={this.state.total}
                     />
                 </div>
             </div>

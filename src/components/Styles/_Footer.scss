@@ -1,4 +1,8 @@
 .foo-bar{
     background-color: $footerBackgroundColor;
     color: $footerTextColor;
+    height: 45px;
+    .foo-title{
+        text-align: center;
+    }
 }

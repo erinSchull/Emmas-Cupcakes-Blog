@@ -11,10 +11,13 @@
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    justify-content: space-around
-    img{
-        height: 150px;
-        width: 100px;
+    justify-content: space-around;
+    div{
+        img{
+            height: 150px;
+            width: 100px;
+            border-radius: 30px;
+        }
     }
 }
 .custom-cakes{
