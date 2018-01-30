@@ -1,10 +1,17 @@
 .shop-titles{
+    padding: 10px;
     h1{
     color: $shopTextColor;
     font-family: $shopTitles;
+    font-size: 30px;
     }
-    h2{
-        color: rgb(12, 5, 20);
+    .premade-title{
+        font-size: 20px;
+        color: $accentColor;
+    }
+    .custom-title{
+        font-size: 20px;
+        color: $accentColor;
     }
 }
 .spec-cupcakes {
@@ -12,12 +19,25 @@
     flex-flow: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    div{
+    padding: 10px;
+    list{
         img{
             height: 150px;
             width: 100px;
             border-radius: 30px;
         }
+        .deathly-hallows{
+            height: 150px;
+            width: 125px;
+        }
+        .cake-title{
+            font-size: $shopCakeFontSize;
+            color: $shopCakeColor;
+        }
+        .cake-descript{
+            font-size: $shopCustomFontSize;
+        }
+
     }
 }
 .custom-cakes{
@@ -28,18 +48,34 @@
     .cakes{
         display: flex;
         flex-flow: column;
+        h4{
+            font-size: $shopCakeFontSize;
+            color: $shopCakeColor;
+        }
     }
     .fillings{
         display: flex;
         flex-flow: column;
+        h4{
+            font-size: $shopCakeFontSize;
+            color: $shopCakeColor;
+        }
     }
     .frostings {
         display: flex;
         flex-flow: column;
+        h4{
+            font-size: $shopCakeFontSize;
+            color: $shopCakeColor;
+        }
     }
     .toppings{
         display: flex;
         flex-flow: column;
+        h4{
+            font-size: $shopCakeFontSize;
+            color: $shopCakeColor;
+        }
     }
 }
 .order-button{

@@ -1,29 +1,39 @@
 .nav-header {
+    background-color: $headerColor;
+    height: 25%;
     .wix {
         text-decoration: none;
-        color: #f4f4f4;
+        color: #B68CB8;
+        margin-top: 8px;
     }
     .app-name{
         padding-top: 20px;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        width: 300px;
+        flex-direction: row;
+        align-items: flex-end;
+        width: 500px;
         .App-logo {
-            width: 120px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
         }
         .App-title {
-        color: $headerTextColor;
+            font-family: $headerFont;
+            padding-bottom: 10px;
+            color: $headerTextColor;
+            font-size: 50px;
         }
     }
     .Links {
         color: $linkTextColor;
         text-decoration: none;
         background-color: $linkBackgroundColor;
+        height: 25px;
         width: 70px;
         border: $linkBorder;
         border-radius: 10px;
+        p{
+            padding-top: 4px;
+        }
     }
     .App-header {
         background-color: $headerColor;
@@ -39,9 +49,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: $navBackground;
-    border: $navBorder;
+    // background-color: $navBackground;
+    // border: $navBorder;
     border-radius: 12px;
+    margin: 3px;
     }                                                                
     
     

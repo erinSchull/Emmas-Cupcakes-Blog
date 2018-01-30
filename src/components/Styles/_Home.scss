@@ -1,26 +1,27 @@
 .home-Div {
     height: $pageHeight;
-    padding: 5px;
+    padding-top: 50px;
     .home-title {
-        padding: 3px;
+        margin: 7px;
         font-size: 40px;
-        color: rgba(246, 70, 174, 0.82);
+        color: $homeTitleColor;
     }
 
     .Home-intro {
-        padding: 3px;
+        margin: 7px;
         font-family: $blogTitles; 
         font-size: 30px;
-        color: #9342F3;
+        color: $homeIntroColor;
     }
     .entry-button {
-        background-color: rgba(0, 255, 195, 0.83);
-        border-color: #9000B6;
+        background-color: $entryButtonBackground;
+        border-color: $accentColor;
         border-radius: 7px;
         height: 30px;
         width: 150px;
         font-size: 20px;
-        color: #240087;
+        color: $entryButtonTextColor;
         border-width: 3px;
+        margin: 10px;
     }   
 }

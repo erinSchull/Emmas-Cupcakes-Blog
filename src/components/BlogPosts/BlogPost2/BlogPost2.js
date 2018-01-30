@@ -1,5 +1,3 @@
-//this is just so my code doesn't break
-
 import React, { Component } from 'react';
 
 class BlogPost2 extends Component {
@@ -89,7 +87,7 @@ class BlogPost2 extends Component {
                     <p>Emma <span role= "img">❤️</span></p>
 
                     <a href='/#/previews' >
-                    <button>I wanna see more!</button>
+                    <button>Back To Previews</button>
                     </a>
             </div>
             

@@ -17,40 +17,42 @@ class Shop extends Component {
         return (
             <div className='shop-titles'>
                 <h1 className='shop-intro' >Welcome to Emma's Cupcake Shop!</h1>
+                <br />
                 <h2 className='premade-title' >Cupcakes I've Made</h2>
                 <div className='spec-cupcakes' >
-                    <div>
+                    <list>
                         <img src={smores} alt='smores cupcake' className='smores-img' />
-                        <h4>Smores Cupcake</h4>
-                        <p>Chocolate cake</p>
-                        <p>Marshmallow filling</p>
-                        <p>Creme cheese frosting</p>
-                        <p>Topped with graham cracker</p>
-                    </div>
-                    <div>
+                        <h4 className='cake-title' >Smores Cupcake</h4>
+                        <p className= 'cake-descript' >Chocolate cake</p>
+                        <p className= 'cake-descript' >Marshmallow filling</p>
+                        <p className= 'cake-descript' >Creme cheese frosting</p>
+                        <p className= 'cake-descript' >Topped with graham cracker</p>
+                    </list>
+                    <list>
                         <img src={winterFormal} alt='wintry cupcake' className='winter-formal' />
-                        <h4>Winter Formal Cupcake</h4>
-                        <p>Chocolate cupcake </p>
-                        <p>Creme cheese frosting</p>
-                        <p>Silver coloured sugar</p>
-                    </div>
-                    <div>
+                        <h4 className='cake-title' >Winter Formal Cupcake</h4>
+                        <p className= 'cake-descript' >Chocolate cupcake </p>
+                        <p className= 'cake-descript' >Creme cheese frosting</p>
+                        <p className= 'cake-descript' >Silver coloured sugar</p>
+                    </list>
+                    <list>
                         <img src={deathlyHallows} alt='deathly hallows cupcake' className='deathly-hallows' />
-                        <h4>Deathly Hallows Cupcake</h4>
-                        <p>Chocolate cupcake</p>
-                        <p>Chocolate buttercream frosting</p>
-                        <p>Gold painted fondant</p>
-                    </div>
-                    <div>
+                        <h4 className='cake-title' >Deathly Hallows Cupcake</h4>
+                        <p className= 'cake-descript' >Chocolate cupcake</p>
+                        <p className= 'cake-descript' >Chocolate buttercream frosting</p>
+                        <p className= 'cake-descript' >Gold painted fondant</p>
+                    </list>
+                    <list>
                         <img src={lemonCakes} alt='lemon zest cupcakes' className='lemon-cake' />
-                        <h4>Lemon Cupcakes</h4>
-                        <p>White cupcakes</p>
-                        <p>Lemon curd filling</p>
-                        <p>creme cheese frosting</p>
-                        <p>Lemon zest to top</p>
-                    </div>
+                        <h4 className='cake-title' >Lemon Cupcakes</h4>
+                        <p className= 'cake-descript' >White cupcakes</p>
+                        <p className= 'cake-descript' >Lemon curd filling</p>
+                        <p className= 'cake-descript' >creme cheese frosting</p>
+                        <p className= 'cake-descript' >Lemon zest to top</p>
+                    </list>
                 </div>
-                    <h2>How you can customize your cupcake order</h2>
+                    <h2 className='custom-title' >How you can customize your cupcake order</h2>
+                    <br />
                 <div className='custom-cakes' >
                     <div className='cakes'>
                     <h4>Cake Flavors</h4>

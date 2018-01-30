@@ -58,25 +58,26 @@ a:visited {
 
 .home-Div {
   height: 65vh;
-  padding: 5px; }
+  padding-top: 50px; }
   .home-Div .home-title {
-    padding: 3px;
+    margin: 7px;
     font-size: 40px;
-    color: rgba(246, 70, 174, 0.82); }
+    color: #fdd9d2; }
   .home-Div .Home-intro {
-    padding: 3px;
+    margin: 7px;
     font-family: "Playfair Display", serif;
     font-size: 30px;
-    color: #9342F3; }
+    color: #AA4465; }
   .home-Div .entry-button {
-    background-color: rgba(0, 255, 195, 0.83);
-    border-color: #9000B6;
+    background-color: #F6EFEE;
+    border-color: #AA4465;
     border-radius: 7px;
     height: 30px;
     width: 150px;
     font-size: 20px;
-    color: #240087;
-    border-width: 3px; }
+    color: #B68CB8;
+    border-width: 3px;
+    margin: 10px; }
 
 .hello-blog {
   display: flex;
@@ -93,7 +94,10 @@ a:visited {
 .blog3-intro {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; }
+  align-items: flex-start;
+  text-align: left;
+  padding: 7px;
+  padding-top: 10px; }
   .blog3-intro h2 {
     font-family: "Playfair Display", serif; }
 
@@ -121,15 +125,22 @@ a:visited {
     width: 200px; }
 
 .blog-previews {
-  height: 65vh; }
+  height: 65vh;
+  padding-top: 10px; }
   .blog-previews h3 {
+    font-size: 30px;
+    padding-bottom: 5px;
     font-family: "Playfair Display", serif;
-    color: #EFE3F2; }
+    color: #fdcec5; }
+  .blog-previews h4 {
+    color: #320f92;
+    font-size: 24px; }
   .blog-previews p {
+    padding-bottom: 7px;
     font-family: 'Dosis', sans-serif;
     text-decoration: none;
     color: #0F0137;
-    font-size: 20px; }
+    font-size: 18px; }
 
 .foo-bar {
   position: absolute;
@@ -141,67 +152,70 @@ a:visited {
   .foo-bar .foo-title {
     text-align: center; }
 
-.nav-header .wix {
-  text-decoration: none;
-  color: #f4f4f4; }
-
-.nav-header .app-name {
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 300px; }
-  .nav-header .app-name .App-logo {
-    width: 120px;
-    height: 150px; }
-  .nav-header .app-name .App-title {
-    color: #EFE3F2; }
-
-.nav-header .Links {
-  color: #253D5B;
-  text-decoration: none;
-  background-color: #4CE0B3;
-  width: 70px;
-  border: solid 5px #F6EFEE;
-  border-radius: 10px; }
-
-.nav-header .App-header {
-  background-color: #93B7BE;
-  height: 200px;
-  padding: 20px;
-  color: #253D5B;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end; }
-
-.nav-header .Nav-Bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: #F7BCB7;
-  border: solid 8px #f6efee;
-  border-radius: 12px; }
-
-.nav-header .Login-button {
-  background-color: #E5C3D1;
-  text-decoration: none;
-  color: #7048b6;
-  height: 30px;
-  width: 50px;
-  border: solid black;
-  border-radius: 7px; }
-
-.nav-header .login {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end; }
-  .nav-header .login .login-content {
+.nav-header {
+  background-color: #fdcec5;
+  height: 25%; }
+  .nav-header .wix {
     text-decoration: none;
+    color: #B68CB8;
+    margin-top: 8px; }
+  .nav-header .app-name {
+    padding-top: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 60px; }
+    align-items: flex-end;
+    width: 500px; }
+    .nav-header .app-name .App-logo {
+      width: 200px;
+      height: 200px; }
+    .nav-header .app-name .App-title {
+      font-family: "Josefin Sans", sans-serif;
+      padding-bottom: 10px;
+      color: white;
+      font-size: 50px; }
+  .nav-header .Links {
+    color: white;
+    text-decoration: none;
+    background-color: #0A014F;
+    height: 25px;
+    width: 70px;
+    border: solid 3px #AA4465;
+    border-radius: 10px; }
+    .nav-header .Links p {
+      padding-top: 4px; }
+  .nav-header .App-header {
+    background-color: #fdcec5;
+    height: 200px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end; }
+  .nav-header .Nav-Bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 12px;
+    margin: 3px; }
+  .nav-header .Login-button {
+    background-color: #BCD4DE;
+    text-decoration: none;
+    color: #AA4465;
+    height: 30px;
+    width: 50px;
+    border: solid 3px #0A014F;
+    border-radius: 7px; }
+  .nav-header .login {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; }
+    .nav-header .login .login-content {
+      text-decoration: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 60px; }
 
 .profile {
   height: 65vh; }
@@ -222,22 +236,37 @@ a:visited {
       font-size: 18px;
       color: #2f3f47; }
 
-.shop-titles h1 {
-  color: #4F2540;
-  font-family: "Josefin Sans", sans-serif; }
-
-.shop-titles h2 {
-  color: #0c0514; }
+.shop-titles {
+  padding: 10px; }
+  .shop-titles h1 {
+    color: #B68CB8;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px; }
+  .shop-titles .premade-title {
+    font-size: 20px;
+    color: #AA4465; }
+  .shop-titles .custom-title {
+    font-size: 20px;
+    color: #AA4465; }
 
 .spec-cupcakes {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
-  justify-content: space-around; }
-  .spec-cupcakes div img {
+  justify-content: space-around;
+  padding: 10px; }
+  .spec-cupcakes list img {
     height: 150px;
     width: 100px;
     border-radius: 30px; }
+  .spec-cupcakes list .deathly-hallows {
+    height: 150px;
+    width: 125px; }
+  .spec-cupcakes list .cake-title {
+    font-size: 18px;
+    color: #0A014F; }
+  .spec-cupcakes list .cake-descript {
+    font-size: 15px; }
 
 .custom-cakes {
   display: flex;
@@ -247,15 +276,27 @@ a:visited {
   .custom-cakes .cakes {
     display: flex;
     flex-flow: column; }
+    .custom-cakes .cakes h4 {
+      font-size: 18px;
+      color: #0A014F; }
   .custom-cakes .fillings {
     display: flex;
     flex-flow: column; }
+    .custom-cakes .fillings h4 {
+      font-size: 18px;
+      color: #0A014F; }
   .custom-cakes .frostings {
     display: flex;
     flex-flow: column; }
+    .custom-cakes .frostings h4 {
+      font-size: 18px;
+      color: #0A014F; }
   .custom-cakes .toppings {
     display: flex;
     flex-flow: column; }
+    .custom-cakes .toppings h4 {
+      font-size: 18px;
+      color: #0A014F; }
 
 .order-button {
   background-color: #f7bcb7;

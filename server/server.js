@@ -66,6 +66,7 @@ passport.use(new Auth0Strategy({
 
 }))
 
+//stripe stuff
 app.post('/api/payment', function(req, res, next){
     //convert amount to pennies
     const amountArray = req.body.amount.toString().split('');

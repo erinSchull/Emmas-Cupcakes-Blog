@@ -16,7 +16,7 @@ class BlogPosts extends Component {
                 <p className='blog1-body3'>But this is all I've got for now. Hopefully future posts will be better.</p>
                 <p className='blog1-sig'>Bye!</p>
                 <a href='/#/previews' >
-                    <button>I wanna see more!</button>
+                <button>Back To Previews</button>
                 </a>
             </div>
         )

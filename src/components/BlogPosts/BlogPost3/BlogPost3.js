@@ -72,7 +72,7 @@ class BlogPost3 extends Component {
                 </p>
                 </div>
                 <a href='/#/previews' >
-                    <button>I wanna see more!</button>
+                <button>Back To Previews</button>
                 </a>
             </div>
         )

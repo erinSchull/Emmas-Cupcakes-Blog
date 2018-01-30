@@ -1,14 +1,22 @@
 .blog-previews{
     height: $pageHeight;
+    padding-top: 10px;
     h3{
+        font-size: 30px;
+        padding-bottom: 5px;
         font-family: $blogTitles; 
-        color: $headerTextColor;
+        color: $blogPreviewTitleColor;
+    }
+    h4{
+        color: $blogTitleColor;
+        font-size: 24px;
     }
     p{
+        padding-bottom: 7px;
         font-family: 'Dosis', sans-serif;
         text-decoration: none;
         color: #0F0137;
-        font-size: 20px;
+        font-size: 18px;
     }
 
 }
