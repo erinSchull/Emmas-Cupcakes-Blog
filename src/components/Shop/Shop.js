@@ -7,6 +7,7 @@ import smores from './../../images/smores-cupcake.jpg';
 import winterFormal from './../../images/winter-formal.jpg';
 import deathlyHallows from './../../images/deathly-hollows-cupcake.jpeg';
 import lemonCakes from './../../images/lemon-cupcakes.png';
+import turtleCake from './../../images/turtle-cupcake.jpg';
 
 class Shop extends Component {
     componentDidMount() {
@@ -49,6 +50,14 @@ class Shop extends Component {
                         <p className= 'cake-descript' >Lemon curd filling</p>
                         <p className= 'cake-descript' >creme cheese frosting</p>
                         <p className= 'cake-descript' >Lemon zest to top</p>
+                    </list>
+                    <list>
+                        <img src={turtleCake} alt='turtle cupcake' className='turtle-cake' />
+                        <h4 className='cake-title' >Turtle Cupcake</h4>
+                        <p className= 'cake-descript' >Chocolate cupcakes</p>
+                        <p className= 'cake-descript' >Pecan Caramel  filling</p>
+                        <p className= 'cake-descript' >vanilla vuttercream frosting</p>
+                        <p className= 'cake-descript' >Chocolate and Caramel Drizzle to top</p>
                     </list>
                 </div>
                     <h2 className='custom-title' >How you can customize your cupcake order</h2>
@@ -107,7 +116,7 @@ class Shop extends Component {
                     </div>
                 </div>
                 <a className='button-text' href= {this.props.user.userid ? '/#/shop/orderform' : process.env.REACT_APP_LOGIN}>
-                <button className='order-button' >Alright, I'm Ready to Order!</button> 
+                <button className='order-button' >{this.props.user.userid ? `Alright, I'm Ready to Order!` : 'Please Log in Before Ordering'}</button> 
                 {/* this works */}
                 </a>
             </div>

@@ -1,11 +1,21 @@
 .about-page{
     width: 100%;
-    margin-right: 25px;
-    margin-left: 25px;
+    margin: 25px;
     .about-Text{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        text-align: left;
+        margin-bottom: 10px;
+        line-height: 20px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    h4{
+        font-size: 24px;
+    }
+    .disclaimer{
+        color: $aboutDisclaimerColor;
     }
     .freepik-link {
         text-decoration: none;

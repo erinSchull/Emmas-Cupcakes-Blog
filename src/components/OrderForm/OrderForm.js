@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getUser, addOrder } from './../../ducks/reducer';
-import './OrderForm.css';
+// import './OrderForm.css';
 import StripeCheckout from 'react-stripe-checkout';
 import stripe from './../../stripeKey';
 import axios from 'axios';
@@ -82,7 +82,7 @@ class OrderForm extends Component {
 
     render() {
         return (
-            <div>
+            <div className='order-form' >
                 <h2>So You Want Some Cupcakes?</h2>
                 <h3>Select Premade Cupcakes</h3>
                 <p>Need a reminder?</p>

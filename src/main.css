@@ -198,14 +198,6 @@ a:visited {
     justify-content: space-around;
     border-radius: 12px;
     margin: 3px; }
-  .nav-header .Login-button {
-    background-color: #BCD4DE;
-    text-decoration: none;
-    color: #AA4465;
-    height: 30px;
-    width: 50px;
-    border: solid 3px #0A014F;
-    border-radius: 7px; }
   .nav-header .login {
     display: flex;
     flex-direction: row;
@@ -216,6 +208,36 @@ a:visited {
       flex-direction: row;
       justify-content: center;
       width: 60px; }
+    .nav-header .login .Login-button {
+      background-color: #BCD4DE;
+      text-decoration: none;
+      color: #AA4465;
+      height: 30px;
+      width: 50px;
+      border: solid 3px #0A014F;
+      border-radius: 7px; }
+
+.custom-cakes {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.cakes {
+  display: flex;
+  flex-flow: column; }
+
+.fillings {
+  display: flex;
+  flex-flow: column; }
+
+.frostings {
+  display: flex;
+  flex-flow: column; }
+
+.toppings {
+  display: flex;
+  flex-flow: column; }
 
 .profile {
   height: 65vh; }
@@ -235,6 +257,26 @@ a:visited {
     .profile .auth-info .email {
       font-size: 18px;
       color: #2f3f47; }
+  .profile .Order-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 300px; }
+    .profile .Order-info .columns {
+      width: 12%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; }
+    .profile .Order-info .tabs {
+      height: 23px;
+      background-color: #7347df;
+      color: white;
+      border-top: solid;
+      border-width: 100%;
+      border-bottom: none;
+      border-color: #1A0F4F;
+      border-radius: 7px; }
 
 .shop-titles {
   padding: 10px; }
@@ -304,16 +346,26 @@ a:visited {
   border-radius: 7px;
   color: #f6efee;
   width: 250px;
-  font-size: 20px; }
+  font-size: 20px;
+  position: fixed;
+  bottom: 0px;
+  right: 40%; }
 
 .about-page {
   width: 100%;
-  margin-right: 25px;
-  margin-left: 25px; }
+  margin: 25px; }
   .about-page .about-Text {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    text-align: left;
+    margin-bottom: 10px;
+    line-height: 20px; }
+  .about-page h1 {
+    font-size: 30px; }
+  .about-page h4 {
+    font-size: 24px; }
+  .about-page .disclaimer {
+    color: #4F2540; }
   .about-page .freepik-link {
     text-decoration: none; }
   .about-page .flaticon-link {

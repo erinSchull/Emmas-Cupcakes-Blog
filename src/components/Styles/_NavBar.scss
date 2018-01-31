@@ -49,7 +49,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    // background-color: $navBackground;
     // border: $navBorder;
     border-radius: 12px;
     margin: 3px;
@@ -57,15 +56,6 @@
     
     
     
-    .Login-button {
-        background-color: $loginButtonBackground;
-        text-decoration: none;
-        color: $loginButtonTextColor;
-        height: 30px;
-        width: 50px;
-        border: $loginButtonBorder;
-        border-radius: 7px;
-    }
     .login{
         display: flex;
         flex-direction: row;
@@ -77,6 +67,14 @@
             justify-content: center;
             width: 60px;
         }
+        .Login-button {
+            background-color: $loginButtonBackground;
+            text-decoration: none;
+            color: $loginButtonTextColor;
+            height: 30px;
+            width: 50px;
+            border: $loginButtonBorder;
+            border-radius: 7px;
+        }
     }
 }
-    
