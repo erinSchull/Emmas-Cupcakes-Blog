@@ -126,15 +126,16 @@ a:visited {
 
 .blog-previews {
   height: 65vh;
-  padding-top: 10px; }
+  padding-top: 100px; }
   .blog-previews h3 {
     font-size: 30px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     font-family: "Playfair Display", serif;
     color: #fdcec5; }
   .blog-previews h4 {
     color: #320f92;
-    font-size: 24px; }
+    font-size: 24px;
+    padding-bottom: 5px; }
   .blog-previews p {
     padding-bottom: 7px;
     font-family: 'Dosis', sans-serif;
@@ -209,13 +210,15 @@ a:visited {
       justify-content: center;
       width: 60px; }
     .nav-header .login .Login-button {
-      background-color: #BCD4DE;
+      background-color: #f6efee;
       text-decoration: none;
       color: #AA4465;
       height: 30px;
-      width: 50px;
-      border: solid 3px #0A014F;
-      border-radius: 7px; }
+      width: 60px;
+      border: solid 2px #0A014F;
+      text-align: center;
+      border-radius: 7px;
+      margin-right: 30px; }
 
 .custom-cakes {
   display: flex;
@@ -305,7 +308,7 @@ a:visited {
     height: 150px;
     width: 125px; }
   .spec-cupcakes list .cake-title {
-    font-size: 18px;
+    font-size: 24px;
     color: #0A014F; }
   .spec-cupcakes list .cake-descript {
     font-size: 15px; }
@@ -315,30 +318,25 @@ a:visited {
   flex-flow: row;
   flex-wrap: wrap;
   justify-content: space-around; }
+  .custom-cakes h4 {
+    font-size: 24px;
+    color: #0A014F; }
   .custom-cakes .cakes {
     display: flex;
     flex-flow: column; }
-    .custom-cakes .cakes h4 {
-      font-size: 18px;
-      color: #0A014F; }
   .custom-cakes .fillings {
     display: flex;
     flex-flow: column; }
-    .custom-cakes .fillings h4 {
-      font-size: 18px;
-      color: #0A014F; }
+    .custom-cakes .fillings .liquid {
+      font-size: 18px; }
+    .custom-cakes .fillings .solid {
+      font-size: 18px; }
   .custom-cakes .frostings {
     display: flex;
     flex-flow: column; }
-    .custom-cakes .frostings h4 {
-      font-size: 18px;
-      color: #0A014F; }
   .custom-cakes .toppings {
     display: flex;
     flex-flow: column; }
-    .custom-cakes .toppings h4 {
-      font-size: 18px;
-      color: #0A014F; }
 
 .order-button {
   background-color: #f7bcb7;
@@ -349,24 +347,41 @@ a:visited {
   font-size: 20px;
   position: fixed;
   bottom: 0px;
-  right: 40%; }
+  right: 43%; }
 
 .about-page {
   width: 100%;
-  margin: 25px; }
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 10%;
+  background-color: #B68CB8;
+  text-align: left; }
   .about-page .about-Text {
     display: flex;
     flex-direction: column;
     text-align: left;
     margin-bottom: 10px;
-    line-height: 20px; }
+    line-height: 20px;
+    color: #0A014F; }
   .about-page h1 {
-    font-size: 30px; }
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: #0A014F; }
   .about-page h4 {
-    font-size: 24px; }
+    font-size: 24px;
+    color: #0A014F; }
   .about-page .disclaimer {
     color: #4F2540;
-    text-indent: 25px; }
+    text-align: center;
+    font-size: 18px; }
+  .about-page .life-text {
+    font-size: 24px;
+    margin-bottom: 10px; }
+  .about-page .about-body {
+    font-size: 20px;
+    text-indent: 20px each-line; }
   .about-page .freepik-link {
     text-decoration: none; }
   .about-page .flaticon-link {

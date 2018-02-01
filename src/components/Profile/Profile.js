@@ -14,14 +14,14 @@ class Profile extends Component {
         }
     }
 
-    
+
     componentDidMount() {
         this.props.getUser();
         this.props.userOrder(this.props.user.userid);
     }
 
     render() {
-        const orders  = this.props.orders;
+        const orders = this.props.orders;
         const users = this.props.user;
         console.log('am I getting the proper userid?', this.props.user);
         return (
@@ -40,148 +40,80 @@ class Profile extends Component {
                     <div className='columns'>
                         <p className='tabs' >Order Number</p>
                         {users.userid ?
-                            <div>{ this.props.orders ? orders.map((item, i) => {
+                            <div>{orders ? orders.map((item, i) => {
                                 return <div key={i}>{item.orderid}</div>
                             }) : 'Please place an order!'
-                        }
+                            }
                             </div> : 'Order'
                         }
-                        {/* all admin rendering is crap. do this in own component */}
-                        {/*{users.is_admin ? 
-                            <div>{orders.map((item, i) => {
-                                return <div key={i}>{item.orderid}</div>
-                            })}
-                            </div> : null
-                        }*/}
                     </div>
 
                     <div className='columns'>
                         <p className='tabs' >Cake Flavor</p>
                         {users.userid ?
-                            <div>{ this.props.orders ?orders.map((item, i) => {
+                            <div>{this.props.orders ? orders.map((item, i) => {
                                 return <div key={i}>{item.cake}</div>
-                            }) : null }
+                            }) : null}
                             </div> : 'information'
                         }
-                        {/*{users.is_admin ?
-                            <div>{orders.map((item, i) => {
-                                return <div key={i}>{item.cake}</div>
-                            })}
-                            </div> : null
-                        }*/}
-
                     </div>
 
                     <div className='columns'>
                         <p className='tabs'>Frosting Flavor</p>
                         {users.userid ?
-                            <div>{ this.props.orders ? orders.map((item, i) => {
+                            <div>{this.props.orders ? orders.map((item, i) => {
                                 return <div key={i}>{item.frosting}</div>
-                            }) : null }
+                            }) : null}
                             </div> : 'will'
                         }
-                        {/*{users.is_admin ?
-                            <div>{orders.map((item, i) => {
-                                return <div key={i}>{item.frosting}</div>
-                            })}
-                            </div> : null
-                        }*/}
-
                     </div>
                     <div className='columns'>
                         <p className='tabs'>Filling Flavor</p>
                         {users.userid ?
-                            <div>{ this.props.orders ? orders.map((item, i) => {
+                            <div>{this.props.orders ? orders.map((item, i) => {
                                 return <div key={i}>{item.filling}</div>
-                            }) : null }
+                            }) : null}
                             </div> : 'show'
                         }
-                       {/* {users.is_admin ?
-                            <div>{orders.map((item, i) => {
-                                return <div key={i}>{item.filling}</div>
-                            })}
-                            </div> : null
-                        }*/}
                     </div>
 
 
                     <div className='columns'>
                         <p className='tabs'>Topping</p>
                         {users.userid ?
-                            <div>{ this.props.orders ? orders.map((item, i) => {
-                                return <div key={i}>{item.topping}</div>
-                            }) : null }
-                            </div> : 'after'
-                        }
-                        {/*{users.is_admin ?
-                            <div>{ this.props.orders ? orders.map((item, i) => {
+                            <div>{this.props.orders ? orders.map((item, i) => {
                                 return <div key={i}>{item.topping}</div>
                             }) : null}
-                            </div> : null
-                        }*/}
+                            </div> : 'after'
+                        }
                     </div>
                     <div className='columns'>
                         <p className='tabs'>Quantity</p>
                         {users.userid ?
-                            <div>{ this.props.orders ? orders.map((item, i) => {
+                            <div>{this.props.orders ? orders.map((item, i) => {
                                 return <div key={i}>{item.quantity}</div>
-                            }) : null }
-                            </div> : 'you'
+                            }) : null}
+                            </div> : 'log in'
                         }
-                        {/*{users.is_admin ?
-                            <div>{orders.map((item, i) => {
-                                return <div key={i}>{item.quantity}</div>
-                            })}
-                            </div> : null
-                        }*/}
                     </div>
                     <div className='columns'>
                         <p className='tabs'>Status</p>
                         {users.userid ?
-                            <div>{ this.props.orders ? orders.map((item, i) => {
+                            <div>{this.props.orders ? orders.map((item, i) => {
                                 return <div key={i}>{item.status}</div>
-                            }) : null }
-                            </div> : 'log'
+                            }) : null}
+                            </div> : 'and'
                         }
-                        {/* {users.is_admin ?
-                            <div>
-                                <select>
-                                    <option onClick={updateStatus} >Submitted</option>
-                                    <option onClick={updateStatus}>Recieved</option>
-                                    <option onClick={updateStatus}>Baking</option>
-                                    <option onClick={updateStatus}>Final Touches</option>
-                                    <option onClick={updateStatus}>Out For Delivery</option>
-                                </select>
-                            </div> :
-                            null} */}
                     </div>
                     <div className='columns' >
                         <p className='tabs'>Total</p>
                         {users.userid ?
                             <div>{orders.map((item, i) => {
-                                return <div key={i}>{item.quantity}</div>
+                                return <div key={i}>${item.total}</div>
                             })}
-                            </div> : 'in'
+                            </div> : 'order'
                         }
-                        {/*{users.is_admin ?
-                            <div>{orders.map((item, i) => {
-                                return <div key={i}>{item.quantity}</div>
-                            })}
-                            </div> : null
-                        }*/}
                     </div>
-                   {/* <div className='columns' >
-                        <p className='tabs'>Delete Orders</p>
-                    
-                        {users.is_admin ?
-                            <div>{orders.map((item, i) => {
-                                return <div key={i}>
-                                <button onClick={this.props.deleteOrder(orderid)}>Delete This Order</button>
-                                </div>
-                            })}
-                            </div> : null
-                        }
-                    </div>*/}
                 </div>
             </div>
         )
@@ -196,4 +128,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, { getUser, userOrder})(Profile);
+export default connect(mapStateToProps, { getUser, userOrder })(Profile);

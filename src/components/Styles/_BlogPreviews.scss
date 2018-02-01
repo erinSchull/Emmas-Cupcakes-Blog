@@ -1,15 +1,16 @@
 .blog-previews{
     height: $pageHeight;
-    padding-top: 10px;
+    padding-top: 100px;
     h3{
         font-size: 30px;
-        padding-bottom: 5px;
+        padding-bottom: 10px;
         font-family: $blogTitles; 
         color: $blogPreviewTitleColor;
     }
     h4{
         color: $blogTitleColor;
         font-size: 24px;
+        padding-bottom: 5px;
     }
     p{
         padding-bottom: 7px;

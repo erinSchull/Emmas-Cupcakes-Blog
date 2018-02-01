@@ -35,7 +35,7 @@
             color: $shopCakeColor;
         }
         .cake-descript{
-            font-size: $shopCustomFontSize;
+            font-size: $shopPremadeFontSize;
         }
 
     }
@@ -45,37 +45,32 @@
     flex-flow: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    h4{
+        font-size: $shopCakeFontSize;
+        color: $shopCakeColor;
+    }
     .cakes{
         display: flex;
         flex-flow: column;
-        h4{
-            font-size: $shopCakeFontSize;
-            color: $shopCakeColor;
-        }
+        
     }
     .fillings{
         display: flex;
         flex-flow: column;
-        h4{
-            font-size: $shopCakeFontSize;
-            color: $shopCakeColor;
+        .liquid{
+            font-size: $shopCustomFontSize;
+        }
+        .solid{
+            font-size: $shopCustomFontSize;
         }
     }
     .frostings {
         display: flex;
         flex-flow: column;
-        h4{
-            font-size: $shopCakeFontSize;
-            color: $shopCakeColor;
-        }
     }
     .toppings{
         display: flex;
         flex-flow: column;
-        h4{
-            font-size: $shopCakeFontSize;
-            color: $shopCakeColor;
-        }
     }
 }
 .order-button{
@@ -87,6 +82,6 @@
     font-size: 20px;   
     position: fixed;
     bottom: 0px;
-    right: 40%;
+    right: 43%;
     // align-self: center;
 }

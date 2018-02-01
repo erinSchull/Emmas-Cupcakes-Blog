@@ -1,23 +1,46 @@
 .about-page{
     width: 100%;
-    margin: 25px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 10%;
+    background-color: $aboutBackground; 
+    text-align: left;
     .about-Text{
         display: flex;
         flex-direction: column;
         text-align: left;
         margin-bottom: 10px;
         line-height: 20px;
+        color: $aboutTextColor;
     }
     h1{
         font-size: 30px;
+        margin-bottom: 5px;
+        color: $aboutTextColor;
     }
     h4{
         font-size: 24px;
+        color: $aboutTextColor;
     }
     .disclaimer{
         color: $aboutDisclaimerColor;
-        text-indent: 25px;
+        text-align: center;
+        font-size: 18px;
     }
+
+    .life-text{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .about-body{
+        font-size: 20px;
+        text-indent: 20px each-line;
+    }
+    // .about-body span{
+    //     text-align: center;
+    // }
     
     .freepik-link {
         text-decoration: none;

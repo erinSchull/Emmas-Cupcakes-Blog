@@ -17,7 +17,6 @@ let initialState ={
 
 
 const GET_USER = 'GET_USER';
-const GET_ORDER = 'GET_ORDER';
 const ADMIN_ORDERS = 'ADMIN_ORDERS';
 const ADD_ORDER = 'ADD_ORDER';
 const GET_ADMIN = 'GET_ADMIN';
@@ -39,16 +38,6 @@ export function getUser() { //action builder//
     }
 };
 
-export function getOrder(orderid) {
-    const order = axios.get(`/api/order/${orderid}`)
-    .then(res => {
-        return res.data
-    })
-    return {
-        type: GET_ORDER,
-        payload: order
-    }
-};
 
 export function readOrders() {
     const orders = axios.get('/api/orders')
@@ -71,8 +60,8 @@ export function getAdmin() {
     }
 };
 
-export function userOrder(usersid) {
-    const userOrder = axios.get(`/api/user/order/${usersid}`)
+export function userOrder(userid) {
+    const userOrder = axios.get(`/api/order/${userid}`)
     .then(res => {
         return res.data
     })
@@ -118,8 +107,6 @@ export default function reducer(state = initialState, action){
     switch(action.type) {
         case GET_USER + '_FULFILLED': //fulfilled is required with axios payloads//
         return Object.assign({}, state, {user: action.payload});
-        case GET_ORDER + '_FULFILLED':
-        return Object.assign({}, state, {orders: action.payload});
         case ADMIN_ORDERS + '_FULFILLED':
         return Object.assign({}, state, {orders: action.payload});
         case GET_ADMIN + '_FULFILLED':

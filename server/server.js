@@ -135,7 +135,6 @@ passport.deserializeUser(function (id, done) {
 
 //db order endpoints 
 //oh my hell these are crap 12/14
-app.get('/api/user/order/:userid', orderCtrl.getOrder);
 app.post('/api/order/:usersid', orderCtrl.addOrder);
 app.put('/api/order/status/:orderid', orderCtrl.updateStatus);
 app.delete('/api/delete/order/:orderid', orderCtrl.deleteOrder);
@@ -144,7 +143,7 @@ app.get('/api/orders', orderCtrl.getAllOrders);
 //db user endpoints
 app.get('/api/admin', ctrl.getAdmin);
 app.get('/api/user', ctrl.getUser);
-app.get('/api/orders/:userid', ctrl.getOrdersOnUser);
+app.get('/api/order/:userid', ctrl.getOrdersOnUser);
 
 
 const PORT = 3005;
