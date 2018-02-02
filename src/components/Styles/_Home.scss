@@ -21,6 +21,9 @@
             font-family: $blogTitles; 
             font-size: 30px;
             color: $homeIntroColor;
+            span{
+                font-size: 24px;
+            }
         }
         .entry-button {
             background-color: $entryButtonBackground;
