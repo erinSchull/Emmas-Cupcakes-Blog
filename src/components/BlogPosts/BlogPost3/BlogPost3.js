@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import winterFormal from './../../../images/winter-formal.jpg';
 import cupcake from './../../../images/cupcake.jpg';
 
-import './BlogPost3.css';
+// import './BlogPost3.css';
 
 class BlogPost3 extends Component {
     render() {

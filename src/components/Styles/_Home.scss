@@ -1,27 +1,37 @@
 .home-Div {
     height: $pageHeight;
-    padding-top: 50px;
-    .home-title {
-        margin: 7px;
-        font-size: 40px;
-        color: $homeTitleColor;
-    }
+    padding-top: 20%;
+    background: $landingBackgroundImage;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    .home-content{
+    position: absolute;
+    right: 7%;
+        .home-title {
+            margin: 7px;
+            font-size: 40px;
+            color: $homeTitleColor;
+        }
 
-    .Home-intro {
-        margin: 7px;
-        font-family: $blogTitles; 
-        font-size: 30px;
-        color: $homeIntroColor;
-    }
-    .entry-button {
-        background-color: $entryButtonBackground;
-        border-color: $accentColor;
-        border-radius: 7px;
-        height: 30px;
-        width: 150px;
-        font-size: 20px;
-        color: $entryButtonTextColor;
-        border-width: 3px;
-        margin: 10px;
-    }   
+        .Home-intro {
+            margin: 7px;
+            font-family: $blogTitles; 
+            font-size: 30px;
+            color: $homeIntroColor;
+        }
+        .entry-button {
+            background-color: $entryButtonBackground;
+            border-color: $accentColor;
+            border-radius: 7px;
+            height: 30px;
+            width: 150px;
+            font-size: 20px;
+            color: $entryButtonTextColor;
+            border-width: 3px;
+            margin: 10px;
+        }  
+    } 
 }

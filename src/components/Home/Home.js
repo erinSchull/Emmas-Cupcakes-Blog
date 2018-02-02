@@ -8,13 +8,17 @@ class Home extends Component {
         return (
             <div>
                 <div className='home-Div'>
-                    <h3 className='home-title' >DISCOVER EMMA'S LIFE</h3>
-                    <p className="Home-intro">
-                        Come On In! (I don't bite)
+                    <div className='home-content' >
+                        <h3 className='home-title' >DISCOVER EMMA'S LIFE</h3>
+                        <br />
+                        <p className="Home-intro">
+                            Come On In! (I don't bite)
                     </p>
-                    <Link to = '/previews' >
-                    <button className='entry-button' >Enter Here</button>
-                    </Link>
+                        <br />
+                        <Link to='/previews' >
+                            <button className='entry-button' >Enter Here</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         )

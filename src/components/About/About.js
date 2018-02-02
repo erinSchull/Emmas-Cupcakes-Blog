@@ -19,6 +19,7 @@ class About extends Component {
                         <span>Well, I'm Emma... and welcome to Emma's Life</span>
                         </p>
                 </div>
+                    <p className='photo-cred' >Landing Photo by Alexandra Kusper on Unsplash</p>
             </div>
 
         )

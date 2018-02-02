@@ -17,7 +17,8 @@
     button{
         height: $buttonHeight;
         width: $buttonWidth;
-        background-color: rgba(230, 53, 247, 0.83);
+        background-color: $buttonBackground;
+        border: $buttonBorder;
         font-size: 12px;
         color: white;
     }

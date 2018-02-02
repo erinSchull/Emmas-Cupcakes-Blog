@@ -2,6 +2,17 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
+//landing page Variables
+// $landingTitleFont: 
+// $landingIntroFont:
+// $landingTitleSize:
+// $landingIntroSize:
+// $landingTitleColor:
+// $landingIntroColor:
+$landingBackgroundImage: url('./images/landing-background.jpg') no-repeat center center fixed;  
+$landingBackgroundImageHeight: 100%;
+$landingBackgroundImageWidth: 100%; 
+
 //page Variables
 $pageHeight: 65vh;
 $accentColor: #AA4465;
@@ -28,6 +39,7 @@ $loginButtonBorder: solid 2px #0A014F;
 //footer variables
 $footerBackgroundColor: #4F2540;
 $footerTextColor: #EFE3F2;
+
 //about variables
 $aboutDisclaimerColor: #4F2540;
 $aboutTextColor: #0A014F;

@@ -58,26 +58,35 @@ a:visited {
 
 .home-Div {
   height: 65vh;
-  padding-top: 50px; }
-  .home-Div .home-title {
-    margin: 7px;
-    font-size: 40px;
-    color: #fdd9d2; }
-  .home-Div .Home-intro {
-    margin: 7px;
-    font-family: "Playfair Display", serif;
-    font-size: 30px;
-    color: #AA4465; }
-  .home-Div .entry-button {
-    background-color: #F6EFEE;
-    border-color: #AA4465;
-    border-radius: 7px;
-    height: 30px;
-    width: 150px;
-    font-size: 20px;
-    color: #B68CB8;
-    border-width: 3px;
-    margin: 10px; }
+  padding-top: 20%;
+  background: url("./images/landing-background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%; }
+  .home-Div .home-content {
+    position: absolute;
+    right: 7%; }
+    .home-Div .home-content .home-title {
+      margin: 7px;
+      font-size: 40px;
+      color: #fdd9d2; }
+    .home-Div .home-content .Home-intro {
+      margin: 7px;
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      color: #AA4465; }
+    .home-Div .home-content .entry-button {
+      background-color: #F6EFEE;
+      border-color: #AA4465;
+      border-radius: 7px;
+      height: 30px;
+      width: 150px;
+      font-size: 20px;
+      color: #B68CB8;
+      border-width: 3px;
+      margin: 10px; }
 
 .hello-blog {
   display: flex;
@@ -107,7 +116,8 @@ a:visited {
   .blog3 button {
     height: 30px;
     width: 125px;
-    background-color: rgba(230, 53, 247, 0.83);
+    background-color: #f7bcb7;
+    border: solid 5px #93b7be;
     font-size: 12px;
     color: white; }
 
@@ -126,10 +136,10 @@ a:visited {
 
 .blog-previews {
   height: 65vh;
-  padding-top: 100px; }
+  margin-top: 100px; }
   .blog-previews h3 {
     font-size: 30px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     font-family: "Playfair Display", serif;
     color: #fdcec5; }
   .blog-previews h4 {
@@ -375,14 +385,13 @@ a:visited {
   .about-page .disclaimer {
     color: #4F2540;
     text-align: center;
-    font-size: 18px; }
+    font-size: 18px;
+    padding-right: 20%; }
   .about-page .life-text {
     font-size: 24px;
     margin-bottom: 10px; }
   .about-page .about-body {
     font-size: 20px;
     text-indent: 20px each-line; }
-  .about-page .freepik-link {
-    text-decoration: none; }
-  .about-page .flaticon-link {
-    text-decoration: none; }
+  .about-page .photo-cred {
+    font-size: 16px; }
