@@ -19,7 +19,7 @@ class Shop extends Component {
             <div className='shop-titles'>
                 <h1 className='shop-intro' >Welcome to Emma's Cupcake Shop!</h1>
                 <br />
-                <h2 className='premade-title' >Cupcakes I've Made</h2>
+                <h2 className='premade-title' >Cupcakes I've Made:</h2>
                 <div className='spec-cupcakes' >
                     <list>
                         <img src={smores} alt='smores cupcake' className='smores-img' />
@@ -65,7 +65,7 @@ class Shop extends Component {
                         <p className='cake-descript' >Chocolate and Caramel Drizzle to top</p>
                     </list>
                 </div>
-                <h2 className='custom-title' >How you can customize your cupcake order</h2>
+                <h2 className='custom-title' >How you can customize your cupcake order:</h2>
                 <br />
                 <div className='custom-cakes' >
                     <div className='cakes'>
@@ -123,7 +123,7 @@ class Shop extends Component {
                         </ol>
                     </div>
                 </div>
-                <a className='button-text' href={this.props.user.userid ? '/#/shop/orderform' : process.env.REACT_APP_LOGIN}>
+                <a className='button-text' href={this.props.user.userid ? '/shop/orderform' : process.env.REACT_APP_LOGIN}>
                     <button className='order-button' >{this.props.user.userid ? `Alright, I'm Ready to Order!` : 'Please Log in Before Ordering'}</button>
                     {/* this works */}
                 </a>

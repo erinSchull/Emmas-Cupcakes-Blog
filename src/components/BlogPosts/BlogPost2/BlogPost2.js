@@ -86,7 +86,7 @@ class BlogPost2 extends Component {
                     <p>Love You</p>
                     <p>Emma <span role= "img">❤️</span></p>
 
-                    <a href='/#/previews' >
+                    <a href='/previews' >
                     <button>Back To Previews</button>
                     </a>
             </div>

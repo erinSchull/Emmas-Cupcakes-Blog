@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './../../images/cupcake-logo.png';
-import icon from './../../images/emmas-cupcake-life-icon.jpg';
 
 import { getUser } from './../../ducks/reducer';
 import { connect } from 'react-redux';
@@ -23,8 +22,8 @@ class NavBar extends Component {
                         <h1 className="App-title">Emma's Life</h1>
                     </div>
                     <div className='login'>
-                        <a className='login-content' href={this.props.user.userid ? process.env.REACT_APP_LOGOUT : process.env.REACT_APP_LOGIN}>
-                            <button className='Login-button'>{this.props.user.userid ? 'Logout' : 'Login'}</button></a>
+                        <a className='login-button' href={this.props.user.userid ? process.env.REACT_APP_LOGOUT : process.env.REACT_APP_LOGIN}>
+                            <button className='Login-content'><strong>{this.props.user.userid ? 'Logout' : 'Login'}</strong></button></a>
                     </div>
                 </header>
                 <div className='Nav' >

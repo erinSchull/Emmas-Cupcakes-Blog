@@ -61,9 +61,18 @@ class OrderForm extends Component {
     }
     updateTotal() {
         var calcTotal = (this.state.quantity * 8000);
+        if (this.state.total === 0){
         this.setState({
             total: calcTotal
         })
+    } else {
+        this.setState({
+            total: 0
+        })
+        this.setState({
+            total: calcTotal
+        })
+    }
 
     }
     handleClick() {

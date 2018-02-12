@@ -1,5 +1,5 @@
 .shop-titles{
-    padding: 10px;
+    padding: 20px;
     h1{
     color: $shopTextColor;
     font-family: $shopTitles;
@@ -10,6 +10,7 @@
         color: $accentColor;
     }
     .custom-title{
+        padding-top: 10px;
         font-size: 20px;
         color: $accentColor;
     }
@@ -21,6 +22,7 @@
     justify-content: space-around;
     padding: 10px;
     list{
+        line-height: 20px;
         img{
             height: 150px;
             width: 100px;
@@ -45,6 +47,7 @@
     flex-flow: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    line-height: 20px;
     h4{
         font-size: $shopCakeFontSize;
         color: $shopCakeColor;

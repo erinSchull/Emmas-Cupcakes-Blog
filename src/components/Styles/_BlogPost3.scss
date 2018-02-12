@@ -1,40 +1,47 @@
-.blog3-intro {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.blog3{
+    position: relative;
+    left: 20px;
     text-align: left;
-    padding: 7px;
-    padding-top: 10px;
-    h2{
-        font-family: $blogTitles;
+    width: 95%;
+        .blog3-intro {
+        padding: 7px;
+        padding-top: 20px;
+        h2{
+            font-family: $blogTitles;
+            font-size: $blogTitleSize;
+        }
+        .cupcake-title{
+            height: $blogTitleImageHeight;
+            width: $blogTitleImageWidth;
+            padding-left: 10px;
+        }
+    }
 
+    .blog3-sub{
+        .silver-cake{
+        position: relative;
+        left: 15%;
+        width: 100px;
+        height: 100px;
     }
 }
-
-.blog3{
-    display: flex;
-    flex-direction: column;
+    
+    .blog3-body{
+        position: relative;
+        left: 0px;
+        font-size: 22px;
+        p{
+            font-family: $blogText;
+        }
+    }
     button{
+        position: relative;
+        left: 44%;
         height: $buttonHeight;
         width: $buttonWidth;
         background-color: $buttonBackground;
         border: $buttonBorder;
         font-size: 12px;
         color: white;
-    }
-}
-.blog3-body{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    p{
-        font-family: $blogText;
-        display: flex;
-    }
-    .silver-cupcake{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 200px;
     }
 }

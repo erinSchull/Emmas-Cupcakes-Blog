@@ -106,7 +106,7 @@ app.post('/api/payment', function(req, res, next){
 
 app.get('/auth', passport.authenticate('auth0')); //just how this library was written
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/#/profile', //where we're running our front end
+    successRedirect: 'http://localhost:3000/profile', //where we're running our front end
     failureRedirect: '/auth'
 }))
 app.get('/auth/me', (req, res) => {
@@ -119,7 +119,7 @@ app.get('/auth/me', (req, res) => {
 //auth endpoints
 app.get('/auth/logout', (req, res) => {
     req.logOut();
-    res.redirect(302, 'http://localhost:3000/#/')
+    res.redirect(302, 'http://localhost:3000/')
 })
 
 

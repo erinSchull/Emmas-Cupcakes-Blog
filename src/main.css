@@ -57,7 +57,7 @@ a:visited {
   height: 100%; }
 
 .home-Div {
-  height: 65vh;
+  height: 100vh;
   padding-top: 20%;
   background: url("./images/landing-background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -67,7 +67,8 @@ a:visited {
   width: 100%; }
   .home-Div .home-content {
     position: absolute;
-    right: 7%; }
+    right: 7%;
+    height: 500px; }
     .home-Div .home-content .home-title {
       margin: 7px;
       font-size: 40px;
@@ -91,53 +92,71 @@ a:visited {
       margin: 10px; }
 
 .hello-blog {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; }
+  position: relative;
+  left: 5%;
+  padding-top: 20px;
+  width: 90%; }
   .hello-blog h2 {
-    font-family: "Playfair Display", serif; }
-  .hello-blog p {
-    font-family: "Open Sans", sans-serif; }
-  .hello-blog button {
-    height: 30px;
-    font-size: 12px; }
-
-.blog3-intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  padding: 7px;
-  padding-top: 10px; }
-  .blog3-intro h2 {
-    font-family: "Playfair Display", serif; }
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    padding-bottom: 10px; }
+  .hello-blog .blog1-body {
+    text-align: left;
+    font-family: "Open Sans", sans-serif;
+    padding-bottom: 5px; }
+  .hello-blog .blog1-sig {
+    text-align: left;
+    font-family: "Open Sans", sans-serif;
+    padding-top: 5px;
+    padding-bottom: 20px; }
+  .hello-blog a {
+    width: 150px;
+    position: relative; }
+    .hello-blog a button {
+      height: 50px;
+      font-size: 15px;
+      background-color: #f7bcb7;
+      border: solid 5px #0A014F;
+      color: white; }
 
 .blog3 {
-  display: flex;
-  flex-direction: column; }
+  position: relative;
+  left: 20px;
+  text-align: left;
+  width: 95%; }
+  .blog3 .blog3-intro {
+    padding: 7px;
+    padding-top: 20px; }
+    .blog3 .blog3-intro h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 30px; }
+    .blog3 .blog3-intro .cupcake-title {
+      height: 300px;
+      width: 400px;
+      padding-left: 10px; }
+  .blog3 .blog3-sub .silver-cake {
+    position: relative;
+    left: 15%;
+    width: 100px;
+    height: 100px; }
+  .blog3 .blog3-body {
+    position: relative;
+    left: 0px;
+    font-size: 22px; }
+    .blog3 .blog3-body p {
+      font-family: "Open Sans", sans-serif; }
   .blog3 button {
-    height: 30px;
-    width: 125px;
+    position: relative;
+    left: 44%;
+    height: 50px;
+    width: 150px;
     background-color: #f7bcb7;
-    border: solid 5px #93b7be;
+    border: solid 5px #0A014F;
     font-size: 12px;
     color: white; }
 
-.blog3-body {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; }
-  .blog3-body p {
-    font-family: "Open Sans", sans-serif;
-    display: flex; }
-  .blog3-body .silver-cupcake {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 200px; }
-
 .blog-previews {
-  height: 65vh;
+  height: 100vh;
   margin-top: 100px; }
   .blog-previews h3 {
     font-size: 30px;
@@ -173,19 +192,19 @@ a:visited {
     color: #B68CB8;
     margin-top: 8px; }
   .nav-header .app-name {
-    padding-top: 20px;
+    padding-top: 0px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     width: 500px; }
     .nav-header .app-name .App-logo {
-      width: 200px;
-      height: 200px; }
+      width: 150px;
+      height: 150px; }
     .nav-header .app-name .App-title {
       font-family: "Josefin Sans", sans-serif;
       padding-bottom: 10px;
       color: white;
-      font-size: 50px; }
+      font-size: 40px; }
   .nav-header .Links {
     color: white;
     text-decoration: none;
@@ -198,8 +217,7 @@ a:visited {
       padding-top: 4px; }
   .nav-header .App-header {
     background-color: #fdcec5;
-    height: 200px;
-    padding: 20px;
+    height: 150px;
     color: white;
     display: flex;
     flex-direction: row;
@@ -214,23 +232,22 @@ a:visited {
   .nav-header .login {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end; }
-    .nav-header .login .login-content {
+    justify-content: flex-end;
+    padding-right: 5px; }
+    .nav-header .login .login-button {
       text-decoration: none;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      width: 60px; }
-    .nav-header .login .Login-button {
-      background-color: #f6efee;
+      width: 60px;
+      height: 60px; }
+    .nav-header .login .Login-content {
+      text-align: center;
+      background-color: white;
       text-decoration: none;
-      color: #AA4465;
+      color: #0A014F;
       height: 30px;
       width: 60px;
-      border: solid 2px #0A014F;
-      text-align: center;
-      border-radius: 7px;
-      margin-right: 30px; }
+      border: solid 2px #AA4465;
+      font-size: 15px;
+      border-radius: 7px; }
 
 .custom-cakes {
   display: flex;
@@ -255,7 +272,12 @@ a:visited {
   flex-flow: column; }
 
 .profile {
-  height: 65vh; }
+  height: 100vh;
+  padding-top: 20px; }
+  .profile .profile-title {
+    font-size: 30px;
+    color: #B68CB8;
+    font-family: "Playfair Display", serif; }
   .profile .auth-info {
     width: 90%;
     padding: 7px;
@@ -263,15 +285,14 @@ a:visited {
     flex-direction: column;
     align-items: baseline;
     border-bottom: solid 5px #4f2540; }
-    .profile .auth-info .first-name {
-      font-size: 21px;
-      color: #2f3f47; }
-    .profile .auth-info .last-name {
-      font-size: 21px;
-      color: #2f3f47; }
-    .profile .auth-info .email {
-      font-size: 18px;
-      color: #2f3f47; }
+    .profile .auth-info p {
+      font-size: 27px;
+      color: #0A014F; }
+  .profile span {
+    text-align: center;
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
+    color: #AA4465; }
   .profile .Order-info {
     padding: 10px;
     display: flex;
@@ -285,16 +306,17 @@ a:visited {
       justify-content: flex-start; }
     .profile .Order-info .tabs {
       height: 23px;
-      background-color: #7347df;
+      background-color: #B68CB8;
       color: white;
       border-top: solid;
       border-width: 100%;
       border-bottom: none;
-      border-color: #1A0F4F;
-      border-radius: 7px; }
+      border-color: #AA4465;
+      border-radius: 7px;
+      margin-bottom: 5px; }
 
 .shop-titles {
-  padding: 10px; }
+  padding: 20px; }
   .shop-titles h1 {
     color: #B68CB8;
     font-family: "Josefin Sans", sans-serif;
@@ -303,6 +325,7 @@ a:visited {
     font-size: 20px;
     color: #AA4465; }
   .shop-titles .custom-title {
+    padding-top: 10px;
     font-size: 20px;
     color: #AA4465; }
 
@@ -312,24 +335,27 @@ a:visited {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px; }
-  .spec-cupcakes list img {
-    height: 150px;
-    width: 100px;
-    border-radius: 30px; }
-  .spec-cupcakes list .deathly-hallows {
-    height: 150px;
-    width: 125px; }
-  .spec-cupcakes list .cake-title {
-    font-size: 24px;
-    color: #0A014F; }
-  .spec-cupcakes list .cake-descript {
-    font-size: 15px; }
+  .spec-cupcakes list {
+    line-height: 20px; }
+    .spec-cupcakes list img {
+      height: 150px;
+      width: 100px;
+      border-radius: 30px; }
+    .spec-cupcakes list .deathly-hallows {
+      height: 150px;
+      width: 125px; }
+    .spec-cupcakes list .cake-title {
+      font-size: 24px;
+      color: #0A014F; }
+    .spec-cupcakes list .cake-descript {
+      font-size: 18px; }
 
 .custom-cakes {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  line-height: 20px; }
   .custom-cakes h4 {
     font-size: 24px;
     color: #0A014F; }
@@ -352,7 +378,7 @@ a:visited {
 
 .order-button {
   background-color: #f7bcb7;
-  border: solid 5px #93b7be;
+  border: solid 5px #0A014F;
   border-radius: 7px;
   color: #f6efee;
   width: 250px;

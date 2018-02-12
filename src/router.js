@@ -9,7 +9,6 @@ import BlogPost2 from './components/BlogPosts/BlogPost2/BlogPost2';
 import BlogPosts from './components/BlogPosts/BlogPost/BlogPost';
 import Shop from './components/Shop/Shop';
 import About from './components/About/About.js';
-import NavBar from './components/NavBar/NavBar';
 import Profile from './components/Profile/Profile';
 
 

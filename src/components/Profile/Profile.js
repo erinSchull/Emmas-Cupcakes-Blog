@@ -36,6 +36,7 @@ class Profile extends Component {
                     <p className='email'> Email: {users.userid ? users.email : 'in'}</p>
                 </div>
 
+                <span >Order Information</span>
                 <div className='Order-info'>
                     <div className='columns'>
                         <p className='tabs' >Order Number</p>

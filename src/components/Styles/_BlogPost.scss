@@ -1,15 +1,34 @@
 .hello-blog{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    position: relative;
+    left: 5%;
+    padding-top: 20px;
+    width: 90%;
     h2{
         font-family: $blogTitles;
+        font-size: 25px;
+        padding-bottom: 10px;
     }
-    p{
+    .blog1-body{
+        text-align: left;
         font-family: $blogText;
+        padding-bottom: 5px;
     }
-    button{
-        height: $buttonHeight;
-        font-size: 12px;
+    .blog1-sig{
+        text-align: left;
+        font-family: $blogText;
+        padding-top: 5px;
+        padding-bottom: 20px;
+    }
+    a{
+        width: $buttonWidth;
+        position: relative;
+
+        button{
+            height: $buttonHeight;
+            font-size: 15px;
+            background-color: $buttonBackground;
+            border: $buttonBorder;
+            color: white;
+        }
     }
 }

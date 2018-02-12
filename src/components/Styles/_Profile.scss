@@ -1,5 +1,11 @@
 .profile {
     height: $pageHeight;
+    padding-top: 20px;
+    .profile-title{
+        font-size: 30px;
+        color: $entryButtonTextColor;
+        font-family: $profileTitleFont;
+    }
     .auth-info{
     width: 90%;
     padding: 7px;
@@ -7,18 +13,24 @@
     flex-direction: column;
     align-items: baseline;
     border-bottom: solid 5px #4f2540;
-    .first-name {
-        font-size: 21px;
-        color: #2f3f47;
+    p{
+        font-size: 27px;
+        color: $authNameColor;
     }
-    .last-name{
-        font-size: 21px;
-        color: #2f3f47;
-    }
-    .email{
-        font-size: 18px;
-        color: #2f3f47;
-    }
+    // .last-name{
+    //     font-size: 21px;
+    //     color: #2f3f47;
+    // }
+    // .email{
+    //     font-size: 18px;
+    //     color: #2f3f47;
+    // }
+}
+span{
+    text-align: center;
+    font-size: 24px;
+    font-family: $profileTitleFont;
+    color: $accentColor;
 }
 .Order-info {
     padding: 10px;
@@ -34,13 +46,14 @@
     }
     .tabs {
         height: 23px;
-        background-color: rgb(115, 71, 223);
+        background-color: $tabsBackgroundColor;
         color: white;
         border-top: solid;
         border-width: 100%;
         border-bottom: none;
-        border-color: #1A0F4F;
+        border-color: $accentColor;
         border-radius: 7px;
+        margin-bottom: 5px;
     }
 }
 }

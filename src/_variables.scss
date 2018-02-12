@@ -3,18 +3,12 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 //landing page Variables
-// $landingTitleFont: 
-// $landingIntroFont:
-// $landingTitleSize:
-// $landingIntroSize:
-// $landingTitleColor:
-// $landingIntroColor:
 $landingBackgroundImage: url('./images/landing-background.jpg') no-repeat center center fixed;  
-$landingBackgroundImageHeight: 100%;
+$landingBackgroundImageHeight: 100vh;
 $landingBackgroundImageWidth: 100%; 
 
 //page Variables
-$pageHeight: 65vh;
+$pageHeight: 100vh;
 $accentColor: #AA4465;
 
 //home Variables
@@ -23,18 +17,25 @@ $entryButtonTextColor: #B68CB8;
 $homeTitleColor: #fdd9d2;
 $homeIntroColor: #AA4465;
 
+// profile Variables
+$tabsBackgroundColor: #B68CB8;
+$authBorder: solid 5px #0A014F;
+$authNameColor: #0A014F;
+$profileTitleFont: 'Playfair Display', serif;
+$orderInfoFont: 'Josefin Sans', sans-serif;
+
 //header variables
 $headerColor: #fdcec5;
 $headerTextColor: white;
 $headerFont: 'Josefin Sans', sans-serif;
 $linkTextColor: white;
-$loginButtonBackground: #f6efee;
+$loginButtonBackground: white;
 $linkBorder: solid 3px #AA4465;
 $navBorder: solid 8px #f6efee;
 $navBackground: #BCD4DE;
 $linkBackgroundColor: #0A014F;
-$loginButtonTextColor: #AA4465;
-$loginButtonBorder: solid 2px #0A014F;
+$loginButtonTextColor:  #0A014F;
+$loginButtonBorder: solid 2px #AA4465;
 
 //footer variables
 $footerBackgroundColor: #4F2540;
@@ -50,12 +51,13 @@ $blogText: 'Open Sans', sans-serif;
 $blogTitles: 'Playfair Display', serif;
 $blogImageHeight: 150px; 
 $blogImageWidth: 100px;
-$blogTitleImageHeight: 200px;
-$blogTitleImageWidth: 300px;
-$buttonHeight: 30px;
-$buttonWidth: 125px;
+$blogTitleImageHeight: 300px;
+$blogTitleImageWidth: 400px;
+$buttonHeight: 50px;
+$buttonWidth: 150px;
 $blogPreviewTitleColor: #fdcec5;
 $blogTitleColor: #320f92;
+$blogTitleSize: 30px;
 
 //shop variables
 $shopDetails: 'Dosis', sans-serif;
@@ -63,8 +65,8 @@ $shopTitles: 'Josefin Sans', sans-serif;
 $shopTextColor: #B68CB8;
 $buttonBackground: #f7bcb7;
 $buttonTextColor: #f6efee;
-$buttonBorder: solid 5px #93b7be;
+$buttonBorder: solid 5px #0A014F;
 $shopCustomFontSize: 18px;
 $shopCakeFontSize: 24px;
-$shopPremadeFontSize: 15px;
+$shopPremadeFontSize: 18px;
 $shopCakeColor: #0A014F;
