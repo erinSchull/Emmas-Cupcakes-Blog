@@ -1,23 +1,87 @@
-.custom-cakes {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.cakes {
-    display: flex;
-    flex-flow: column;
-}
-.fillings {
-    display: flex;
-    flex-flow: column;
-}
-.frostings {
-    display: flex;
-    flex-flow: column;
-}
-.toppings {
-    display: flex;
-    flex-flow: column;
+#order-form{
+    padding-top: 50px;
+    height: 100vh;
+    .form-title{
+        font-size: 30px;
+        padding-bottom: 10px;
+        font-family: $shopTitles;
+        color: $shopTextColor;
+    }
+    .select-title{
+        font-size: 24px;
+        padding-bottom: 5px;
+        color: $accentColor;
+    }
+    .reminder{
+        padding-top: 5px;
+        padding-bottom: 3px;
+    }
+     
+    .shop-link{
+        padding-bottom: 5px;
+        color: blue;
+    }
+    .custom-title{
+        padding-top: 10px;
+        font-size: 24px;
+        padding-bottom: 10px;
+        color: $accentColor;
+    }
+    .custom-cakes {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+    .custom-stuff{
+        font-size: 21px;
+        color: $darkColor;
+        margin-bottom: 3px;
+    }
+    .liquid-title{
+        color: $accentColor;
+        font-size: 18px;
+    }
+    .solid-title{
+        margin-top: 5px;
+        color: $accentColor;
+        font-size: 18px;
+    }
+    
+    .cakes {
+        display: flex;
+        flex-flow: column;
+    }
+    .fillings {
+        display: flex;
+        flex-flow: column;
+    }
+    .frostings {
+        display: flex;
+        flex-flow: column;
+    }
+    .toppings {
+        display: flex;
+        flex-flow: column;
+    }
+    .checkout{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        .total{
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            margin-right: 5%;
+            width: 150px;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 18px;
+            .damage{
+                color: $darkColor;
+            }
+        }
+    }
+    
 }

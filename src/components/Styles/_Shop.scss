@@ -1,18 +1,20 @@
 .shop-titles{
     padding: 20px;
-    h1{
+    height: 90vh;
+    box-sizing: border-box;
+    .shop-intro{
     color: $shopTextColor;
     font-family: $shopTitles;
     font-size: 30px;
     }
     .premade-title{
         font-size: 20px;
-        color: $accentColor;
+        color: $darkColor;
     }
     .custom-title{
         padding-top: 10px;
         font-size: 20px;
-        color: $accentColor;
+        color: $darkColor;
     }
 }
 .spec-cupcakes {
@@ -34,10 +36,11 @@
         }
         .cake-title{
             font-size: $shopCakeFontSize;
-            color: $shopCakeColor;
+            color: $accentColor;
         }
         .cake-descript{
             font-size: $shopPremadeFontSize;
+            color: $darkColor;
         }
 
     }
@@ -48,9 +51,11 @@
     flex-wrap: wrap;
     justify-content: space-around;
     line-height: 20px;
-    h4{
+    margin-bottom: 20px;
+    div > h4{
         font-size: $shopCakeFontSize;
-        color: $shopCakeColor;
+        color: $accentColor;
+        margin-bottom: -5px;
     }
     .cakes{
         display: flex;
@@ -62,9 +67,11 @@
         flex-flow: column;
         .liquid{
             font-size: $shopCustomFontSize;
+            color: grey;
         }
         .solid{
             font-size: $shopCustomFontSize;
+            color: grey;
         }
     }
     .frostings {
@@ -75,6 +82,9 @@
         display: flex;
         flex-flow: column;
     }
+    ol > li{
+        color: $darkColor;
+    }
 }
 .order-button{
     background-color: $buttonBackground;
@@ -83,8 +93,7 @@
     color: $buttonTextColor;
     width: 250px;
     font-size: 20px;   
-    position: fixed;
-    bottom: 0px;
+    margin-top: 10px;
     right: 43%;
-    // align-self: center;
+
 }

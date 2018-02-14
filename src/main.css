@@ -54,7 +54,8 @@ a:visited {
 
 .App {
   text-align: center;
-  height: 100%; }
+  height: 100%;
+  background-color: #f4f4f4; }
 
 .home-Div {
   height: 100vh;
@@ -157,13 +158,19 @@ a:visited {
 
 .blog-previews {
   height: 100vh;
-  margin-top: 100px; }
+  margin-top: 100px;
+  text-align: center; }
   .blog-previews h3 {
     font-size: 30px;
     padding-bottom: 20px;
     font-family: "Playfair Display", serif;
     color: #fdcec5; }
+  .blog-previews .links {
+    width: 100px; }
   .blog-previews h4 {
+    width: 25%;
+    position: relative;
+    left: 37.75%;
     color: #320f92;
     font-size: 24px;
     padding-bottom: 5px; }
@@ -233,43 +240,89 @@ a:visited {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding-right: 5px; }
+    padding-right: 25px; }
     .nav-header .login .login-button {
       text-decoration: none;
       width: 60px;
       height: 60px; }
     .nav-header .login .Login-content {
       text-align: center;
-      background-color: white;
+      background-color: #0A014F;
       text-decoration: none;
-      color: #0A014F;
+      color: white;
       height: 30px;
       width: 60px;
-      border: solid 2px #AA4465;
+      border: solid 3px #AA4465;
       font-size: 15px;
       border-radius: 7px; }
 
-.custom-cakes {
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  justify-content: space-around; }
-
-.cakes {
-  display: flex;
-  flex-flow: column; }
-
-.fillings {
-  display: flex;
-  flex-flow: column; }
-
-.frostings {
-  display: flex;
-  flex-flow: column; }
-
-.toppings {
-  display: flex;
-  flex-flow: column; }
+#order-form {
+  padding-top: 50px;
+  height: 100vh; }
+  #order-form .form-title {
+    font-size: 30px;
+    padding-bottom: 10px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #B68CB8; }
+  #order-form .select-title {
+    font-size: 24px;
+    padding-bottom: 5px;
+    color: #AA4465; }
+  #order-form .reminder {
+    padding-top: 5px;
+    padding-bottom: 3px; }
+  #order-form .shop-link {
+    padding-bottom: 5px;
+    color: blue; }
+  #order-form .custom-title {
+    padding-top: 10px;
+    font-size: 24px;
+    padding-bottom: 10px;
+    color: #AA4465; }
+  #order-form .custom-cakes {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px; }
+  #order-form .custom-stuff {
+    font-size: 21px;
+    color: #0A014F;
+    margin-bottom: 3px; }
+  #order-form .liquid-title {
+    color: #AA4465;
+    font-size: 18px; }
+  #order-form .solid-title {
+    margin-top: 5px;
+    color: #AA4465;
+    font-size: 18px; }
+  #order-form .cakes {
+    display: flex;
+    flex-flow: column; }
+  #order-form .fillings {
+    display: flex;
+    flex-flow: column; }
+  #order-form .frostings {
+    display: flex;
+    flex-flow: column; }
+  #order-form .toppings {
+    display: flex;
+    flex-flow: column; }
+  #order-form .checkout {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center; }
+    #order-form .checkout .total {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      margin-right: 5%;
+      width: 150px;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 18px; }
+      #order-form .checkout .total .damage {
+        color: #0A014F; }
 
 .profile {
   height: 100vh;
@@ -316,18 +369,20 @@ a:visited {
       margin-bottom: 5px; }
 
 .shop-titles {
-  padding: 20px; }
-  .shop-titles h1 {
+  padding: 20px;
+  height: 90vh;
+  box-sizing: border-box; }
+  .shop-titles .shop-intro {
     color: #B68CB8;
     font-family: "Josefin Sans", sans-serif;
     font-size: 30px; }
   .shop-titles .premade-title {
     font-size: 20px;
-    color: #AA4465; }
+    color: #0A014F; }
   .shop-titles .custom-title {
     padding-top: 10px;
     font-size: 20px;
-    color: #AA4465; }
+    color: #0A014F; }
 
 .spec-cupcakes {
   display: flex;
@@ -346,19 +401,22 @@ a:visited {
       width: 125px; }
     .spec-cupcakes list .cake-title {
       font-size: 24px;
-      color: #0A014F; }
+      color: #AA4465; }
     .spec-cupcakes list .cake-descript {
-      font-size: 18px; }
+      font-size: 18px;
+      color: #0A014F; }
 
 .custom-cakes {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  line-height: 20px; }
-  .custom-cakes h4 {
+  line-height: 20px;
+  margin-bottom: 20px; }
+  .custom-cakes div > h4 {
     font-size: 24px;
-    color: #0A014F; }
+    color: #AA4465;
+    margin-bottom: -5px; }
   .custom-cakes .cakes {
     display: flex;
     flex-flow: column; }
@@ -366,15 +424,19 @@ a:visited {
     display: flex;
     flex-flow: column; }
     .custom-cakes .fillings .liquid {
-      font-size: 18px; }
+      font-size: 18px;
+      color: grey; }
     .custom-cakes .fillings .solid {
-      font-size: 18px; }
+      font-size: 18px;
+      color: grey; }
   .custom-cakes .frostings {
     display: flex;
     flex-flow: column; }
   .custom-cakes .toppings {
     display: flex;
     flex-flow: column; }
+  .custom-cakes ol > li {
+    color: #0A014F; }
 
 .order-button {
   background-color: #f7bcb7;
@@ -383,17 +445,18 @@ a:visited {
   color: #f6efee;
   width: 250px;
   font-size: 20px;
-  position: fixed;
-  bottom: 0px;
+  margin-top: 10px;
   right: 43%; }
 
 .about-page {
-  width: 100%;
+  width: 100vw;
+  box-sizing: border-box;
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 20px;
+  padding-top: 90px;
   padding-bottom: 20px;
   margin-top: 10%;
+  height: 45vh;
   background-color: #B68CB8;
   text-align: left; }
   .about-page .about-Text {
@@ -402,14 +465,14 @@ a:visited {
     text-align: left;
     margin-bottom: 10px;
     line-height: 20px;
-    color: #0A014F; }
+    color: #f6efee; }
   .about-page h1 {
     font-size: 30px;
     margin-bottom: 5px;
-    color: #0A014F; }
+    color: #f6efee; }
   .about-page h4 {
     font-size: 24px;
-    color: #0A014F; }
+    color: #f6efee; }
   .about-page .disclaimer {
     color: #4F2540;
     text-align: center;
@@ -422,4 +485,5 @@ a:visited {
     font-size: 20px;
     text-indent: 20px each-line; }
   .about-page .photo-cred {
-    font-size: 16px; }
+    font-size: 16px;
+    color: #0A014F; }

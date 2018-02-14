@@ -1,10 +1,12 @@
 .about-page{
-    width: 100%;
+    width: 100vw;
+    box-sizing: border-box;
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 20px;
+    padding-top: 90px;
     padding-bottom: 20px;
     margin-top: 10%;
+    height: 45vh;
     background-color: $aboutBackground; 
     text-align: left;
     .about-Text{
@@ -44,5 +46,6 @@
     // }
     .photo-cred{
         font-size: 16px;
+        color: $darkColor;
     }
 }

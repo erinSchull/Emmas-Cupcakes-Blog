@@ -1,13 +1,21 @@
 .blog-previews{
     height: $pageHeight;
     margin-top: 100px;
+    text-align: center;
     h3{
         font-size: 30px;
         padding-bottom: 20px;
         font-family: $blogTitles; 
         color: $blogPreviewTitleColor;
+        
+    }
+    .links{
+        width: 100px;
     }
     h4{
+        width: 25%;
+        position: relative;
+        left: 37.75%;
         color: $blogTitleColor;
         font-size: 24px;
         padding-bottom: 5px;

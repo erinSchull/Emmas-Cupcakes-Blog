@@ -61,7 +61,7 @@ class Shop extends Component {
                         <br />
                         <p className='cake-descript' >Chocolate cupcakes</p>
                         <p className='cake-descript' >Pecan Caramel  filling</p>
-                        <p className='cake-descript' >vanilla vuttercream frosting</p>
+                        <p className='cake-descript' >Vanilla buttercream frosting</p>
                         <p className='cake-descript' >Chocolate and Caramel Drizzle to top</p>
                     </list>
                 </div>
