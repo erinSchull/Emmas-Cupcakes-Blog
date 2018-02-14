@@ -2,7 +2,9 @@ import axios from 'axios';
 
 
 let initialState ={
-    user: [],
+    user: [{
+        userid: null
+    }],
     orders: [{
         status: '',
         cake: '',

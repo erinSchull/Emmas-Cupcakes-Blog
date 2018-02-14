@@ -96,11 +96,12 @@ a:visited {
   position: relative;
   left: 5%;
   padding-top: 20px;
-  width: 90%; }
+  width: 90%;
+  height: 78vh; }
   .hello-blog h2 {
     font-family: "Playfair Display", serif;
     font-size: 25px;
-    padding-bottom: 10px; }
+    padding-bottom: 15px; }
   .hello-blog .blog1-body {
     text-align: left;
     font-family: "Open Sans", sans-serif;

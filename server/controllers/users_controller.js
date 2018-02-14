@@ -15,9 +15,10 @@ module.exports = {
     },
     getOrdersOnUser: (req, res, next) => {
         const db = req.app.get('db');
-        const {userid} = req.params;
+        const {usersid} = req.params;
         //fixed 12/8 ...maybe
-        db.join_users_orders([userid])
+        console.log('what is req.params?', req.params);
+        db.join_users_orders([usersid])
         .then (response => {
             res.status(200).send(response)
         })
