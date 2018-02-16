@@ -1,7 +1,13 @@
 .blog-previews{
-    height: $pageHeight;
-    margin-top: 100px;
+    height: 45vh;
+    margin-top: 8%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 90px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
     text-align: center;
+    background-color: $aboutBackground;
     h3{
         font-size: 30px;
         padding-bottom: 20px;
@@ -24,7 +30,7 @@
         padding-bottom: 7px;
         font-family: 'Dosis', sans-serif;
         text-decoration: none;
-        color: #0F0137;
+        color: $aboutTextColor;
         font-size: 18px;
     }
 

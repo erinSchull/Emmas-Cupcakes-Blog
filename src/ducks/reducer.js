@@ -6,7 +6,7 @@ let initialState ={
         userid: null
     }],
     orders: [{
-        status: '',
+        status: 'submitted',
         cake: '',
         filling: '',
         frosting: '',

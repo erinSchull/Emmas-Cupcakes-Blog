@@ -22,7 +22,7 @@ class BlogPost3 extends Component {
                         Also, the picture on top is not mine but the one below is. (the picture below is a chocolate cake because I don't have any pictures with the white cake <span role="img">😳</span> but it is still looks quite similar)
                     </p>
                     <br />
-                    <img className='silver-cake' src={winterFormal} alt='wintry cupcake' />
+                    <img className='winter-formal' src={winterFormal} alt='wintry cupcake' />
                 </div>
                 <br />
                 <div>

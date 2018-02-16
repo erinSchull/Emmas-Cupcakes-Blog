@@ -125,7 +125,15 @@ a:visited {
   position: relative;
   left: 20px;
   text-align: left;
-  width: 95%; }
+  width: 95%;
+  font-family: "Open Sans", sans-serif;
+  color: #0A014F; }
+  .blog3 .winter-formal {
+    position: relative;
+    left: 30px;
+    width: 200px;
+    height: 300px;
+    border-radius: 7px; }
   .blog3 .blog3-intro {
     padding: 7px;
     padding-top: 20px; }
@@ -135,12 +143,8 @@ a:visited {
     .blog3 .blog3-intro .cupcake-title {
       height: 300px;
       width: 400px;
-      padding-left: 10px; }
-  .blog3 .blog3-sub .silver-cake {
-    position: relative;
-    left: 15%;
-    width: 100px;
-    height: 100px; }
+      padding-left: 10px;
+      border-radius: 7px; }
   .blog3 .blog3-body {
     position: relative;
     left: 0px;
@@ -154,13 +158,20 @@ a:visited {
     width: 150px;
     background-color: #f7bcb7;
     border: solid 5px #0A014F;
-    font-size: 12px;
-    color: white; }
+    font-size: 15px;
+    color: white;
+    font-family: "Open Sans", sans-serif; }
 
 .blog-previews {
-  height: 100vh;
-  margin-top: 100px;
-  text-align: center; }
+  height: 45vh;
+  margin-top: 8%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 90px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #B68CB8; }
   .blog-previews h3 {
     font-size: 30px;
     padding-bottom: 20px;
@@ -179,7 +190,7 @@ a:visited {
     padding-bottom: 7px;
     font-family: 'Dosis', sans-serif;
     text-decoration: none;
-    color: #0F0137;
+    color: #f6efee;
     font-size: 18px; }
 
 .foo-bar {
@@ -318,7 +329,7 @@ a:visited {
       flex-direction: row;
       align-content: center;
       margin-right: 5%;
-      width: 150px;
+      width: 250px;
       justify-content: space-around;
       align-items: center;
       font-size: 18px; }

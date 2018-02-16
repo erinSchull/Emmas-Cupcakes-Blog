@@ -3,6 +3,15 @@
     left: 20px;
     text-align: left;
     width: 95%;
+    font-family: $blogText;
+    color: $darkColor;
+    .winter-formal{
+        position: relative;
+        left: 30px;
+        width: 200px;
+        height: 300px;
+        border-radius: 7px;
+    }
         .blog3-intro {
         padding: 7px;
         padding-top: 20px;
@@ -14,17 +23,11 @@
             height: $blogTitleImageHeight;
             width: $blogTitleImageWidth;
             padding-left: 10px;
+            border-radius: 7px;
         }
     }
 
-    .blog3-sub{
-        .silver-cake{
-        position: relative;
-        left: 15%;
-        width: 100px;
-        height: 100px;
-    }
-}
+
     
     .blog3-body{
         position: relative;
@@ -41,7 +44,8 @@
         width: $buttonWidth;
         background-color: $buttonBackground;
         border: $buttonBorder;
-        font-size: 12px;
+        font-size: 15px;
         color: white;
+        font-family: $blogText;
     }
 }

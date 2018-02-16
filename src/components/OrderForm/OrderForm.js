@@ -109,6 +109,7 @@ class OrderForm extends Component {
                     <option value="Winter Formal" onChange={this.handleCakeInput} >Winter Formal</option>
                     <option value="Deathly Hallows" onChange={this.handleCakeInput} >Deathly Hallows</option>
                     <option value="Lemon Cake" onChange={this.handleCakeInput} >Lemon Cake</option>
+                    <option value="Turtle Cake" onChange={this.handleCakeInput} >Turtle Cake</option>
                 </select>
                 <h3 className='custom-title' >... Or Customize Your Cupcakes!</h3>
                 <div className='custom-cakes' >
@@ -169,7 +170,7 @@ class OrderForm extends Component {
 
                     <section className='total' >
 
-                        <h4 className='damage' >Your Damage:</h4>
+                        <h4 className='damage' >Your Total:</h4>
                         <p>${this.state.localTotal}.00</p>
                     </section>
                     <div className='stripe-checkout' >
