@@ -7,7 +7,7 @@ const express = require('express')
     , Auth0Strategy = require('passport-auth0')
     , cors = require('cors')
     , stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
-
+    , path = require('path');
 
     
 const ctrl = require('./controllers/users_controller');
@@ -16,6 +16,7 @@ const orderCtrl = require('./controllers/orders_controller');
     
 const app = express();
     
+app.use( express.static( `${__dirname}/../build` ) );
 app.use(cors())
 app.use(bodyParser.json());
 app.use(session({ //always config first
@@ -106,7 +107,7 @@ app.post('/api/payment', function(req, res, next){
 
 app.get('/auth', passport.authenticate('auth0')); //just how this library was written
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/profile', //where we're running our front end
+    successRedirect: process.env.REACT_APP_BASEURL, //where we're running our front end
     failureRedirect: '/auth'
 }))
 app.get('/auth/me', (req, res) => {
@@ -119,7 +120,7 @@ app.get('/auth/me', (req, res) => {
 //auth endpoints
 app.get('/auth/logout', (req, res) => {
     req.logOut();
-    res.redirect(302, 'http://localhost:3000/')
+    res.redirect(302, `https://${process.env.AUTH_DOMAIN}/v2/logout?returnTo=${process.env.AUTH_LOGOUT_REDIRECT}`)
 })
 
 
@@ -145,6 +146,8 @@ app.get('/api/admin', ctrl.getAdmin);
 app.get('/api/user', ctrl.getUser);
 app.get('/api/order/:userid', ctrl.getOrdersOnUser);
 
-app.use( express.static( `${__dirname}/../build` ) );
-const PORT = 3005;
+app.use('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/../build/index.html'));
+})
+const PORT = 8005;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
