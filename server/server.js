@@ -145,6 +145,6 @@ app.get('/api/admin', ctrl.getAdmin);
 app.get('/api/user', ctrl.getUser);
 app.get('/api/order/:userid', ctrl.getOrdersOnUser);
 
-
+app.use( express.static( `${__dirname}/../build` ) );
 const PORT = 3005;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
