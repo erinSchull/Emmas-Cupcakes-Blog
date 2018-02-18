@@ -32,7 +32,7 @@ class OrderForm extends Component {
     onToken = (token) => {
         token.card = void 0;
         console.log('token', token);
-        axios.post(process.env.STRIPE_BASE_URL, { token, amount: 100 }).then(response => {
+        axios.post(process.env.REACT_APP_STRIPE, { token, amount: 100 }).then(response => {
             alert('we are in business')
         });
     }
